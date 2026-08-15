@@ -1,0 +1,140 @@
+@use "variables" as *;
+
+body {
+    margin: 0;
+    font-family: $main-font;
+    color: $color-text-main;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.02;
+}
+
+// body._lock {
+//   overflow: hidden;
+// }
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// .wrapper {
+//   height: 100vh;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+//   perspective: 10px;
+//   scroll-behavior: smooth; 
+// }
+.text-sections {
+    background-color: $color-white;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol,
+p {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    padding: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.section {
+    padding: 40px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 60px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 80px 0;
+    }
+}
+
+.section__title {
+    margin-bottom: 40px;
+    font-family: $main-font;
+    font-size: 22px;
+    font-weight: 600;
+    color: $color-teal-dark;
+    text-align: start;
+    text-transform: uppercase;
+
+    // @media screen and (min-width: 768px) {
+    //     font-size: 30px;
+
+    //     & span {
+    //         display: block;
+    //         margin-left: 210px;
+    //         text-shadow: 10px 0 15px $text-color;
+    //     }
+    // }
+
+    // @media screen and (min-width: 1200px) {
+    //     font-size: 40px;
+
+    //     & span {
+    //         display: block;
+    //         margin-left: 280px;
+    //     }
+    // }
+}
+
+// .animation {
+//   opacity: 0;
+//   transform: translate(0px, 40px);
+//   transition: all 0.8s ease 0s;  
+// }
+
+// .scroll-animation {
+//   opacity: 1;
+//   transform: translate(0px, 0px);
+//   transition: all 0.8s ease 0s;
+// }
+.container {
+    margin: 0 auto;
+
+    @media screen and (min-width: 320px) {
+        max-width: 320px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+        padding-right: 75px;
+        padding-left: 75px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1024px;
+        padding-right: 71px;
+        padding-left: 71px;
+    }
+}

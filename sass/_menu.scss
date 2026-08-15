@@ -1,0 +1,144 @@
+@use "variables" as *;
+
+// Базовий стилі кнопки-гамбургера (видно тільки на мобільних)
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; // Вище за мобільне меню
+
+    span {
+        width: 100%;
+        height: 3px;
+        background-color: $color-teal-dark;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    // Анімація гамбургера в Хрестик
+    &.active {
+        span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+    }
+
+    @media (min-width: 992px) {
+        display: none; // Ховаємо на десктопах
+    }
+}
+
+// Мобільне меню (Slide-out Navigation)
+.main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%; // Сховано за правим краєм екрана
+    width: 280px;
+    height: 100vh;
+    background-color: $color-white;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 24px 40px;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+
+    &.active {
+        right: 0; // Висувається на екран
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+
+        li {
+            margin-bottom: 20px;
+
+            a {
+                text-decoration: none;
+                color: $color-text-main;
+                font-size: 1.125rem; // 18px
+                font-weight: 500;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $color-teal-medium;
+                }
+            }
+        }
+    }
+
+    .nav-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    // Десктопний вигляд (LG >= 992px)
+    @media (min-width: 992px) {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+
+        ul {
+            display: flex;
+            gap: 24px;
+            margin: 0;
+
+            li {
+                margin-bottom: 0;
+            }
+        }
+
+        .nav-btn {
+            display: none; // Ховаємо дубльовану кнопку на десктопі
+        }
+    }
+}
+
+// Затемнення фону (Overlay)
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px); // Легке розмиття фону
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+// Заборона скролу сторінки, коли меню відкрите
+body.no-scroll {
+    overflow: hidden;
+}

@@ -1,0 +1,73 @@
+@use "variables" as *;
+
+.section__hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 43px 100px 20px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        padding: 200px 43px 200px 20px;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 300px 43px 300px 20px;
+        position: relative;
+    }
+}
+
+.header__container__descktop {
+    display: none;
+
+    @media screen and (min-width: 992px) {
+        display: block;
+        position: absolute;
+        top: -150px;
+        left: 0;
+    }
+}
+
+.header__container__desctop__logo {
+    width: 400px;
+    height: 400px;
+}
+
+.section__hero__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.section__hero__title {
+    font-family: $accent-font;
+    color: $color-teal-dark;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section__hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: $color-text-main;
+}
+
+.section__hero__description {
+    color: $color-text-muted;
+    margin-bottom: 24px;
+}
+
+
+
+.section__hero__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

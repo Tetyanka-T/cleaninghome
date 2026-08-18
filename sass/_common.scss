@@ -4,6 +4,7 @@ body {
     margin: 0;
     font-family: $main-font;
     color: $color-text-main;
+    background-color: $color-white;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
@@ -29,9 +30,7 @@ html {
 //   perspective: 10px;
 //   scroll-behavior: smooth; 
 // }
-.text-sections {
-    background-color: $color-white;
-}
+
 
 a {
     text-decoration: none;
@@ -77,34 +76,85 @@ input {
     }
 }
 
-.section__title {
-    margin-bottom: 40px;
-    font-family: $main-font;
-    font-size: 22px;
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 25px;
     font-weight: 600;
-    color: $color-teal-dark;
-    text-align: start;
-    text-transform: uppercase;
-
-    // @media screen and (min-width: 768px) {
-    //     font-size: 30px;
-
-    //     & span {
-    //         display: block;
-    //         margin-left: 210px;
-    //         text-shadow: 10px 0 15px $text-color;
-    //     }
-    // }
-
-    // @media screen and (min-width: 1200px) {
-    //     font-size: 40px;
-
-    //     & span {
-    //         display: block;
-    //         margin-left: 280px;
-    //     }
-    // }
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
+
+.btn-primary {
+    background-color: $color-teal-medium;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-teal-dark;
+    }
+}
+
+.btn-secondary {
+    background-color: $color-teal-dark;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-teal-medium;
+    }
+}
+
+.section__title {
+    text-align: center;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 8px;
+}
+
+.section__subtitle {
+    text-align: center;
+    color: $color-text-muted;
+    margin-bottom: 32px;
+    font-size: 1.1rem;
+}
+
+// .section__title {
+//     margin-bottom: 40px;
+//     font-family: $accent-font;
+//     font-size: 22px;
+//     font-weight: 600;
+//     color: $color-teal-dark;
+//     text-align: start;
+//     text-transform: uppercase;
+
+//     // @media screen and (min-width: 768px) {
+//     //     font-size: 30px;
+
+//     //     & span {
+//     //         display: block;
+//     //         margin-left: 210px;
+//     //         text-shadow: 10px 0 15px $text-color;
+//     //     }
+//     // }
+
+//     // @media screen and (min-width: 1200px) {
+//     //     font-size: 40px;
+
+//     //     & span {
+//     //         display: block;
+//     //         margin-left: 280px;
+//     //     }
+//     // }
+// }
+
+
+
+// .trust-signals-section {
+//     background-color: $color-bg-light;
+// }
 
 // .animation {
 //   opacity: 0;

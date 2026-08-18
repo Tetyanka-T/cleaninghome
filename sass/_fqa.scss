@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.section__faq {
+    padding: 60px 0;
+    background-color: $color-card-bg;
+
+    .section__faqlist {
+        max-width: 800px;
+        margin: 0 auto;
+
+        details {
+            background: $color-white;
+            border: 1px solid $color-border;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 16px;
+
+            summary {
+                font-weight: 700;
+                color: $color-teal-dark;
+                cursor: pointer;
+            }
+
+            p {
+                margin-top: 12px;
+                color: $color-text-muted;
+            }
+        }
+    }
+}

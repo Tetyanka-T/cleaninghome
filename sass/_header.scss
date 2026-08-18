@@ -1,6 +1,23 @@
 @use "variables" as *;
 
-// Базовий стилі кнопки-гамбургера (видно тільки на мобільних)
+
+
+.header__container__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+
+}
+
+.header__container__menu__logo {
+    width: 100px;
+    height: 100px;
+}
+
 .burger-menu {
     display: flex;
     flex-direction: column;
@@ -21,8 +38,9 @@
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    // Анімація гамбургера в Хрестик
     &.active {
+
+
         span:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
@@ -36,16 +54,16 @@
         }
     }
 
-    @media (min-width: 992px) {
-        display: none; // Ховаємо на десктопах
+    @media screen and (min-width: 992px) {
+        display: none;
     }
 }
 
-// Мобільне меню (Slide-out Navigation)
-.main-nav {
+
+.header__container__nav {
     position: fixed;
     top: 0;
-    right: -100%; // Сховано за правим краєм екрана
+    right: -100%;
     width: 280px;
     height: 100vh;
     background-color: $color-white;
@@ -57,21 +75,17 @@
     z-index: 1000;
 
     &.active {
-        right: 0; // Висувається на екран
+        right: 0;
     }
 
     ul {
-        list-style: none;
-        padding: 0;
         margin: 0 0 30px 0;
 
         li {
             margin-bottom: 20px;
 
             a {
-                text-decoration: none;
                 color: $color-text-main;
-                font-size: 1.125rem; // 18px
                 font-weight: 500;
                 transition: color 0.3s ease;
 
@@ -82,13 +96,12 @@
         }
     }
 
-    .nav-btn {
+    .header__container__nav__button {
         text-align: center;
         width: 100%;
     }
 
-    // Десктопний вигляд (LG >= 992px)
-    @media (min-width: 992px) {
+    @media screen and (min-width: 992px) {
         position: static;
         width: auto;
         height: auto;
@@ -108,21 +121,21 @@
             }
         }
 
-        .nav-btn {
-            display: none; // Ховаємо дубльовану кнопку на десктопі
+        .header__container__nav__button {
+            display: none;
         }
     }
 }
 
-// Затемнення фону (Overlay)
-.nav-overlay {
+
+.header__container__nav__overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(2px); // Легке розмиття фону
+    backdrop-filter: blur(2px);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -133,12 +146,28 @@
         visibility: visible;
     }
 
-    @media (min-width: 992px) {
-        display: none;
-    }
+
 }
 
-// Заборона скролу сторінки, коли меню відкрите
+
 body.no-scroll {
     overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+    .header {
+        padding: 40px 0;
+        margin-left: 350px;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        padding: 40px 0;
+        margin-left: 600px;
+    }
+
+
 }

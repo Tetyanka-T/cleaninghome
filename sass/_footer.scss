@@ -1,0 +1,34 @@
+@use "variables" as *;
+
+.section__footer {
+    background-color: $color-teal-dark;
+    color: $color-white;
+    padding-top: 48px;
+
+    .section__footer__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 40px;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    a {
+        color: $color-teal-light;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    .section__footer__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+}

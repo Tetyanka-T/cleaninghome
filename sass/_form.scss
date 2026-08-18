@@ -1,0 +1,63 @@
+@use "variables" as *;
+
+.section__booking {
+    padding: 60px 0;
+
+    .section__booking__form {
+        background: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+        @media screen and (min-width: 768px) {
+            padding: 40px;
+        }
+    }
+
+    .section__booking__form__group-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .section__booking__form__field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        &.full-width {
+            margin-bottom: 24px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: $color-teal-dark;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 12px 16px;
+            border: 1px solid $color-border;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+
+            &:focus {
+                border-color: $color-teal-medium;
+            }
+        }
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 16px;
+    }
+}

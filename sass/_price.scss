@@ -1,9 +1,9 @@
 @use "variables" as *;
 
-.section__services {
+.section__price {
     padding: 60px 0;
 
-    .section__services__list {
+    .section__price__list {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
@@ -18,7 +18,7 @@
         }
     }
 
-    .section__services__card {
+    .section__price__card {
         background: $color-card-bg;
         border: 1px solid $color-border;
         border-radius: 12px;
@@ -32,7 +32,7 @@
             transform: translateY(-5px);
         }
 
-        .section__services__card-icon {
+        .section__price__card-icon {
             margin-bottom: 16px;
         }
 
@@ -48,7 +48,7 @@
             flex-grow: 1;
         }
 
-        .section__services__card__price-tag {
+        .section__price__card__price-tag {
             font-weight: 700;
             color: $color-teal-medium;
             background: $color-white;

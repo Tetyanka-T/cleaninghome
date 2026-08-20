@@ -1,24 +1,29 @@
 @use "variables" as *;
 
+
 .section__hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero2.jpg);
+    background-image: linear-gradient(to right,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.95) 30%,
+            rgba(255, 255, 255, 0.4) 55%,
+            transparent 75%), url(../images/hero2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 100px 43px 100px 20px;
+    padding: 100px 0px 200px 0px;
     position: relative;
 
     @media screen and (min-width: 768px) {
-        padding: 200px 43px 200px 20px;
+        padding: 200px 0px 300px 0px;
     }
 
     @media screen and (min-width: 992px) {
-        padding: 300px 43px 300px 20px;
-        position: relative;
+        padding: 300px 0px 300px 0px;
     }
 }
 
-.header__container__descktop {
+
+.logo__container__descktop {
     display: none;
 
     @media screen and (min-width: 992px) {
@@ -34,34 +39,49 @@
     height: 400px;
 }
 
-.section__hero__container {
+.section__hero__content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    justify-content: flex-start;
+    gap: 40px;
+
+
+    & button {
+        width: 200px;
+    }
 
     @media screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
+        max-width: 480px;
+        width: 100%;
+        padding: 0;
     }
 }
 
 .section__hero__title {
     font-family: $accent-font;
-    color: $color-teal-dark;
+    color: $color-teal-medium;
     font-size: 30px;
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: left;
+
+
+    @media screen and (min-width: 768px) {
+        font-size: 50px;
+    }
 }
 
-.section__hero__subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-    color: $color-text-main;
-}
 
 .section__hero__description {
-    color: $color-text-muted;
-    margin-bottom: 24px;
+    color: $color-teal-dark;
+    font-size: 16px;
+    font-weight: 600;
+
+
+    @media screen and (min-width: 768px) {
+        font-size: 30px;
+    }
 }
 
 
@@ -70,4 +90,27 @@
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.section__hero__icon {
+    width: 30px;
+    height: 30px;
+    fill: $color-white;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+
+    @media screen and (min-width: 768px) {
+        width: 50px;
+        height: 50px;
+        right: 100px;
+        bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 80px;
+        height: 80px;
+        right: 200px;
+        bottom: 50px;
+    }
 }

@@ -3,40 +3,54 @@
 .section__why-us {
     padding: 60px 0;
     background-color: $color-bg-light;
+    background-image: linear-gradient(to top,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.85) 30%,
+            rgba(255, 255, 255, 0.3) 50%), url(../images/whyus2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-    .section__why-us__container {
+
+    @media screen and (min-width: 768px) {
+        padding: 50px 0px 50px 0px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 80px 0px 80px 0px;
+    }
+
+}
+
+
+.section__why-us__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+.section__why-us__list {
+    list-style: none;
+    margin-top: 24px;
+
+    li {
         display: flex;
-        flex-direction: column;
-        gap: 32px;
+        gap: 12px;
+        margin-bottom: 16px;
 
-        @media screen and (min-width: 768px) {
-            flex-direction: row;
-            align-items: center;
+        .check-icon {
+            color: $color-teal-medium;
+            font-weight: bold;
         }
     }
+}
 
-    .section__why-us__content,
-    .section__why-us__image {
-        flex: 1;
-    }
-
-    .section__why-us__list {
-        list-style: none;
-        margin-top: 24px;
-
-        li {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
-
-            .check-icon {
-                color: $color-teal-medium;
-                font-weight: bold;
-            }
-        }
-    }
-
-    .section__why-us__image img {
-        border-radius: 16px;
-    }
+.section__why-us__image img {
+    border-radius: 16px;
 }

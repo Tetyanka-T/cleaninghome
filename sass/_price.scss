@@ -1,60 +1,105 @@
 @use "variables" as *;
 
+
 .section__price {
     padding: 60px 0;
+}
 
-    .section__price__list {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
+.section__price__description {
+    margin: 20px 0px;
+    color: $color-teal-dark;
+}
 
-        @media screen and (min-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
+.section__price__list__item-card__description__bottom {
+    color: $color-teal-dark;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
 
-        @media screen and (min-width: 1200px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
+.section__price__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+
+    overflow: scroll;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    padding: 30px 0;
+    align-items: stretch;
+}
+
+.section__price__list__item {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    width: 300px;
+    position: relative;
+
+}
+
+.section__price__list__item-card {
+    background: $color-card-bg;
+    border: 1px solid $color-border;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
     }
 
-    .section__price__card {
-        background: $color-card-bg;
-        border: 1px solid $color-border;
-        border-radius: 12px;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: transform 0.3s ease;
+}
 
-        &:hover {
-            transform: translateY(-5px);
-        }
+.section__price__list__item-card__title {
+    margin-bottom: 8px;
+}
 
-        .section__price__card-icon {
-            margin-bottom: 16px;
-        }
+.section__price__list__item-card__description {
+    color: $color-text-muted;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
 
-        h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-        }
+.section__price__list__item-card__list__item {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: $color-text-muted;
+    line-height: 1.4;
+    transition: color 0.3s ease;
 
-        p {
-            color: $color-text-muted;
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-            flex-grow: 1;
-        }
-
-        .section__price__card__price-tag {
-            font-weight: 700;
-            color: $color-teal-medium;
-            background: $color-white;
-            padding: 6px 12px;
-            border-radius: 12px;
-            border: 1px solid $color-border;
-        }
+    &::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $color-teal-medium;
+        font-size: 0.85rem;
+        transition: transform 0.3s ease, color 0.3s ease;
     }
+}
+
+.section__price__item-card__price-tag {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $color-teal-medium;
+    background: $color-white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid $color-border;
+    margin: 0 auto;
+}
+
+.section__prise__minimum {
+    margin-top: 20px;
+    color: $color-teal-dark;
+}
+
+.section__prise__conditions {
+
+    margin-top: 10px;
 }

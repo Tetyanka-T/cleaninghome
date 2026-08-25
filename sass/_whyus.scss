@@ -1,12 +1,13 @@
 @use "variables" as *;
 
 .section__why-us {
+    position: relative;
     padding: 60px 0;
     background-color: $color-bg-light;
     background-image: linear-gradient(to top,
             #ffffff 0%,
-            rgba(255, 255, 255, 0.85) 30%,
-            rgba(255, 255, 255, 0.3) 50%), url(../images/whyus2.jpg);
+            rgba(255, 255, 255, 0.85) 20%,
+            rgba(255, 255, 255, 0.3) 40%), url(../images/whyus2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -16,12 +17,19 @@
         padding: 50px 0px 50px 0px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 992px) {
         padding: 80px 0px 80px 0px;
     }
 
 }
 
+.section__why-us__bubbles {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+}
 
 .section__why-us__container {
     display: flex;
@@ -43,12 +51,12 @@
         display: flex;
         gap: 12px;
         margin-bottom: 16px;
-
-        .check-icon {
-            color: $color-teal-medium;
-            font-weight: bold;
-        }
     }
+}
+
+.section__why-us__list__icon {
+    color: $color-teal-dark;
+    font-weight: bold;
 }
 
 .section__why-us__image img {

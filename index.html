@@ -12,9 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC541e3CH1XJ8A25154/zAW6f17489re6e2EB1bApQ+pjOHra68bfE3280+ZwLnVoA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./sass/main.css">
     </link>
 </head>
@@ -42,9 +41,8 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button href="#booking-form" class="btn btn-primary header__container__nav__button">Book Now</button>
+            <a href="./booking.html" class="btn btn-primary header__container__nav__button">Book Now</a>
         </nav>
-        <!-- Темний фон при відкритті меню -->
         <div class="header__container__nav__overlay" id="navOverlay"></div>
     </header>
 
@@ -58,9 +56,8 @@
                 <p class="section__hero__description">
                     Chicago & Surrounding Suburbs
                 </p>
-                <button href="#booking-form" class="btn btn-secondary">Book Your Cleaning</button>
+                <a href="./booking.html" class="btn btn-secondary">Book Your Cleaning</a>
             </div>
-
         </div>
 
         <svg class="section__hero__wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -105,13 +102,6 @@
                         transition seamless and stress-free</p>
 
                 </li>
-                <!-- <li class="section__services__list__item">
-                    <img class="section__services__list__item__image" src="./images/move.png" />
-                    <h3 section__services__list__item__title>Airbnb & Rental Property Cleaning</h3>
-                    <p class="section__services__list__item__discription">Reliable cleaning services for short-term
-                        rentals, Airbnb properties, landlords, and investment properties.</p>
-
-                </li> -->
                 <li class="section__services__list__item">
                     <svg class="section__services__list__item__icon" width="40px" height="40px">
                         <use href="./images/sprite.svg#office"></use>
@@ -121,27 +111,13 @@
                         workspace fresh, healthy, and productive</p>
 
                 </li>
-                <!-- <li class="section__services__list__item">
-                    <svg class="section__services__list__item__icon" width="40px" height="40px">
-                        <use href="./images/sprite.svg#additional"></use>
-                    </svg>
-                    <h3 class="section__services__list__item__title">Additional Services</h3>
-                    <p class="section__services__list__item__discription">From deep-cleaning appliances and windows to
-                        fresh linens and pet hair removal, we take care of the extra details so your home stays
-                        spotless.</p>
-
-                </li> -->
-
             </ul>
-
         </div>
-
     </section>
 
 
-
-    <!-- WHY CHOOSE US / FEATURES SECTION -->
     <section id="about" class="section__why-us">
+        <img src="images/bubbles.png" class="section__why-us__bubbles" alt="bubbles">
         <div class="container section__why-us__content">
             <h2 class="section__title">Why Choose Ameliva?</h2>
             <p class="section__title__decor"></p>
@@ -152,198 +128,214 @@
                         every area.</span>
                 </li>
                 <li>
-                    <span class="section__why-us__list">✓</span>
+                    <span class="section__why-us__list__icon">✓</span>
                     <span><strong>Experienced Professionals:</strong> Highly skilled team treating your home with
                         care and respect.</span>
                 </li>
                 <li>
-                    <span class="section__why-us__list">✓</span>
+                    <span class="section__why-us__list__icon">✓</span>
                     <span><strong>Modern Equipment:</strong> Effective cleaning methods and professional-grade
                         products.</span>
                 </li>
                 <li>
-                    <span class="section__why-us__list">✓</span>
+                    <span class="section__why-us__list__icon">✓</span>
                     <span><strong>100% Satisfaction Guaranteed:</strong> Reliable, honest & customer-focused
                         service.</span>
                 </li>
             </ul>
         </div>
-        <!-- <div class="section__why-us__image">
-                <img src="/images/whyus.jpg" alt="Eco-friendly cleaning supplies in basket" width="500" height="350">
-            </div> -->
 
     </section>
+
+
     <section id="services" class="section__price">
         <div class="container">
             <h2 class="section__title">Price</h2>
-            <p class="section__subtitle">Professional Cleaning. Elevated Standards.</p>
-            <p>Незалежно від того, чи потрібен вам регулярний догляд, деталізоване генеральне прибиранне або повне
-                прибирання при в'їзді/виїзді, наша команда прагне зробити ваш простір свіжим, бездоганно чистим і
-                доглянутим.</p>
-            <div class="section__price__list">
-                <!-- Service 1 -->
-                <article class="section__price__card">
-                    <div class="section__price__card-icon">
-                        <img src="assets/icons/home-standard.svg" alt="Standard Cleaning Icon" width="48" height="48">
-                    </div>
-                    <h3>Standard Cleaning</h3>
-                    <p>Regular cleaning to keep your home fresh and tidy. Perfect for weekly, bi-weekly, or monthly
-                        maintenance.</p>
-                    <span class="section__price__card__price-tag">Starting at $110</span>
-                </article>
+            <p class="section__price__description">Whether you need routine maintenance, a detailed deep cleaning, or a
+                complete move-in/move-out service,
+                our team is committed to making your space feel fresh, spotless, and beautifully maintained.</p>
+            <ul class="section__price__list">
+                <li class="section__price__list__item">
+                    <article class="section__price__list__item-card">
+                        <h3 class="section__price__list__item-card__title">Standard Cleaning</h3>
+                        <p class="section__price__list__item-card__description">Regular cleaning to keep your home fresh
+                            and tidy. Perfect for weekly, bi-weekly, or monthly maintenance</p>
+                        <ul class="section__price__list__item-card__list">
+                            <li class="section__price__list__item-card__list__item">Kitchen countertops, sink,
+                                backsplash, and appliance exteriors</li>
+                            <li class="section__price__list__item-card__list__item">Dusting of furniture and surfaces
+                            </li>
+                            <li class="section__price__list__item-card__list__item">Vacuuming carpets and rugs</li>
+                            <li class="section__price__list__item-card__list__item">Mopping floors</li>
+                            <li class="section__price__list__item-card__list__item">Trash removal</li>
+                            <li class="section__price__list__item-card__list__item">High-touch surface cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Bedroom and living area refresh</li>
+                        </ul>
+                        <p class="section__price__item-card__price-tag">Starting at $110</p>
+                    </article>
 
-                <!-- Service 2 -->
-                <article class="section__price__card">
-                    <div class="section__price__card-icon">
-                        <img src="assets/icons/deep-clean.svg" alt="Deep Cleaning Icon" width="48" height="48">
-                    </div>
-                    <h3>Deep Cleaning</h3>
-                    <p>A deep, detailed clean for a healthier home. Focuses on accumulated buildup, baseboards, and
-                        hard-to-reach areas.</p>
-                    <span class="section__price__card__price-tag">Starting at $200</span>
-                </article>
+                </li>
+                <li class="section__price__list__item">
+                    <article class="section__price__list__item-card">
+                        <h3 class="section__price__list__item-card__title">Deep Cleaning</h3>
+                        <p class="section__price__list__item-card__description">We focus on accumulated dust, buildup,
+                            grime, and areas that are often overlooked during regular cleaning.</p>
+                        <p class="section__price__list__item-card__description__bottom">Includes everything in Standart
+                            Cleaning, Plus:</p>
+                        <ul class="section__price__list__item-card__list">
+                            <li class="section__price__list__item-card__list__item">Detailed bathroom scrubbing</li>
+                            <li class="section__price__list__item-card__list__item">Thorough kitchen cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Baseboard cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Doors and door frames</li>
+                            <li class="section__price__list__item-card__list__item">Light fixtures</li>
+                            <li class="section__price__list__item-card__list__item">Window sills and blinds</li>
+                            <li class="section__price__list__item-card__list__item">Hard-to-reach areas</li>
+                            <li class="section__price__list__item-card__list__item">Detailed removal of dust and buildup
+                            </li>
+                        </ul>
+                        <p class="section__price__item-card__price-tag">Starting at $200</p>
+                    </article>
+                </li>
+                <li class="section__price__list__item">
+                    <article class="section__price__list__item-card">
 
-                <!-- Service 3 -->
-                <article class="section__price__card">
-                    <div class="section__price__card-icon">
-                        <img src="assets/icons/move-in-out.svg" alt="Move-In Move-Out Cleaning Icon" width="48"
-                            height="48">
-                    </div>
-                    <h3>Move-In / Move-Out</h3>
-                    <p>Start fresh in your new home. We'll handle the mess and prepare the property for its next
-                        chapter.</p>
-                    <span class="section__price__card__price-tag">Starting at $250</span>
-                </article>
+                        <h3 class="section__price__list__item-card__title">Move-In / Move-Out</h3>
+                        <p class="section__price__list__item-card__description">Perfect for renters, homeowners,
+                            landlords, property managers, and real estate professionals.</p>
+                        <ul class="section__price__list__item-card__list">
+                            <li class="section__price__list__item-card__list__item">Complete home cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Detailed kitchen and bathroom
+                                cleaning
+                            </li>
+                            <li class="section__price__list__item-card__list__item">Interior cabinet cleaning upon
+                                request</li>
+                            <li class="section__price__list__item-card__list__item">Floor cleaning and care</li>
+                            <li class="section__price__list__item-card__list__item">Dust and debris removal</li>
+                            <li class="section__price__list__item-card__list__item">Final detailed touch-up</li>
+                        </ul>
+                        <p class="section__price__item-card__price-tag">Starting at $250</p>
+                    </article>
+                </li>
+                <li class="section__price__list__item">
+                    <article class="section__price__list__item-card">
+                        <h3 class="section__price__list__item-card__title">Airbnb & Rental Turnovers</h3>
+                        <p class="section__price__list__item-card__description">Guest-Ready, Every Time.
+                            Reliable cleaning services for short-term rentals, Airbnb properties, landlords, and
+                            investment properties.
+                        </p>
+                        <ul class="section__price__list__item-card__list">
+                            <li class="section__price__list__item-card__list__item">Complete turnover cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Kitchen and bathroom sanitization
+                            </li>
+                            <li class="section__price__list__item-card__list__item">Bedroom preparation</li>
+                            <li class="section__price__list__item-card__list__item">Bed linen changes</li>
+                            <li class="section__price__list__item-card__list__item">Laundry service upon request</li>
+                            <li class="section__price__list__item-card__list__item">Restocking essentials upon request
+                            </li>
+                            <li class="section__price__list__item-card__list__item">Final presentation check</li>
 
-                <!-- Service 4 -->
-                <article class="section__price__card">
-                    <div class="section__price__card-icon">
-                        <img src="assets/icons/calendar-recurring.svg" alt="Recurring Cleaning Icon" width="48"
-                            height="48">
-                    </div>
-                    <h3>Airbnb & Rental Turnovers</h3>
-                    <p>Guest-ready turnover cleaning for hosts, property managers, and rental investment properties.
-                    </p>
-                    <span class="section__price__card__price-tag">Starting at $80</span>
-                </article>
-            </div>
+                            <li class="section__price__list__item-card__list__item">Additional Service <span>Laundry
+                                    Service — +$40–$80</span>
+                            </li>
+                        </ul>
+                        <p class="section__price__item-card__price-tag">Starting at $80</p>
+                    </article>
+                </li>
+                <li class="section__price__list__item">
+                    <article class="section__price__list__item-card">
+                        <h3 class="section__price__list__item-card__title">Office & Commercial Cleaning</h3>
+                        <p class="section__price__list__item-card__description">A Cleaner Workplace. A Better
+                            Impression.</p>
+                        <ul class="section__price__list__item-card__list">
+                            <li class="section__price__list__item-card__list__item">Workspace cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Restroom cleaning & sanitizing</li>
+                            <li class="section__price__list__item-card__list__item">Trash removal</li>
+                            <li class="section__price__list__item-card__list__item">Floor cleaning</li>
+                            <li class="section__price__list__item-card__list__item">Common area cleaning</li>
+                            <li class="section__price__list__item-card__list__item">High-touch surface sanitizing</li>
+                        </ul>
+                        <p class="section__price__list__item-card__description__bottom">For larger commercial properties
+                            and recurring contracts, custom quotes are available.</p>
+                        <p class="section__price__item-card__price-tag">Starting at $150</p>
+                    </article>
+                </li>
+                <li class="section__price__list__item">
+                    <article class="section__price__list__item-card">
+                        <h3 class="section__price__list__item-card__title">Additional Services</h3>
+                        <p class="section__price__list__item-card__description">Customize your cleaning service with
+                            additional options.</p>
+                        <ul class="section__price__list__item-card__list">
+                            <li class="section__price__list__item-card__list__item">Laundry Wash & Fold — +$40–$60</li>
+                            <li class="section__price__list__item-card__list__item">Laundry Wash, Fold & Put Away —
+                                +$60–$100</li>
+                            <li class="section__price__list__item-card__list__item">Interior Window Cleaning — +$50+
+                            </li>
+                            <li class="section__price__list__item-card__list__item">Inside Refrigerator — +$40–$75</li>
+                            <li class="section__price__list__item-card__list__item">Inside Oven — +$40–$75</li>
+                            <li class="section__price__list__item-card__list__item">Inside Cabinets — +$75+</li>
+                            <li class="section__price__list__item-card__list__item">Heavy Pet Hair Removal — +$30–$100
+                            </li>
+                        </ul>
+                        <p class="section__price__list__item-card__description__bottom">Additional services may vary
+                            depending
+                            on the size and condition of the property.</p>
+                    </article>
+                </li>
+            </ul>
+            <p class="section__prise__minimum">Minimum Service Charge - $120</p>
+            <p class="section__prise__conditions">A minimum service charge applies to cleaning appointments.
+                Final pricing may vary depending on the property’s size, condition, location, and requested services.
+            </p>
+        </div>
+    </section>
+    <section class="section__discount">
+        <div class="container">
+            <h3 class="section__title">Save More With Regular Service</h3>
+            <p class="section__discount__desc">Choose a recurring cleaning schedule and enjoy
+                convenient, consistent home
+                maintenance.</p>
+            <ul class="section__discount__list">
+                <li class="section__discount__list__item">Weekly Cleaning — 15% OFF</li>
+                <li class="section__discount__list__item">Every 2 Weeks — 10% OFF</li>
+                <li class="section__discount__list__item">Monthly Cleaning — 5% OFF</li>
+            </ul>
+            <p class="section__discount__priority">Recurring clients may also receive priority scheduling based on
+                availability.</p>
         </div>
     </section>
 
-
-    <!-- TRUST SIGNALS / BADGES BANNER -->
-    <section class="section__trust-signals__section">
+    <section class="section__before-after">
         <div class="container">
-            <ul class="section__trust-signals__list">
-                <li>
-                    <img src="assets/icons/shield.svg" alt="Licensed and Insured Icon" width="32" height="32">
-                    <span>Licensed & Insured</span>
+            <h3 class="section__title">Before / After</h3>
+            <ul class="section__before-after__list">
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after.jpg" />
                 </li>
-                <li>
-                    <img src="assets/icons/guarantee.svg" alt="Satisfaction Guaranteed Icon" width="32" height="32">
-                    <span>Satisfaction Guaranteed</span>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after2.jpg" />
                 </li>
-                <li>
-                    <img src="assets/icons/schedule.svg" alt="Flexible Scheduling Icon" width="32" height="32">
-                    <span>Flexible Scheduling</span>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after3.jpg" />
                 </li>
-                <li>
-                    <img src="assets/icons/payment.svg" alt="Secure Payments Icon" width="32" height="32">
-                    <span>Secure & Easy Payments</span>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after4.jpg" />
+                </li>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after5.jpg" />
+                </li>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after6.jpg" />
+                </li>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after8.jpg" />
+                </li>
+                <li class="section__before-after__list__item">
+                    <img class="section__before-after__list__item__img" src="./images/before-after7.jpg" />
                 </li>
             </ul>
         </div>
     </section>
 
-    ONLINE BOOKING FORM SECTION (Згідно з розділом 9 ТЗ)
-    <!-- <section id="booking-form" class="section__booking">
-        <div class="container">
-            <h2 class="section__title">Get Your Free Quote</h2>
-            <p class="section__subtitle">Tell us about your home and choose your preferred schedule.</p>
-
-            <form class="section__booking__form" action="#" method="POST">
-   
-                <div class="section__booking__form__group-row">
-                    <div class="section__booking__form__field">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(773) 000-0000" required>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                    </div>
-                </div>
-
-  
-                <div class="section__booking__form__group-row">
-                    <div class="section__booking__form__field">
-                        <label for="city">City / Area *</label>
-                        <input type="text" id="city" name="city" placeholder="Chicago" required>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="zipCode">ZIP Code *</label>
-                        <input type="text" id="zipCode" name="zipCode" placeholder="60614" required>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="serviceType">Type of Cleaning *</label>
-                        <select id="serviceType" name="serviceType" required>
-                            <option value="regular">Regular Cleaning</option>
-                            <option value="deep">Deep Cleaning</option>
-                            <option value="move-in-out">Move-In / Move-Out</option>
-                            <option value="airbnb">Airbnb Turnover</option>
-                            <option value="office">Office Cleaning</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="section__booking__form__group-row">
-                    <div class="section__booking__form__field">
-                        <label for="bedrooms">Bedrooms</label>
-                        <select id="bedrooms" name="bedrooms">
-                            <option value="studio">Studio</option>
-                            <option value="1">1 Bedroom</option>
-                            <option value="2">2 Bedrooms</option>
-                            <option value="3">3 Bedrooms</option>
-                            <option value="4+">4+ Bedrooms</option>
-                        </select>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="bathrooms">Bathrooms</label>
-                        <select id="bathrooms" name="bathrooms">
-                            <option value="1">1 Bathroom</option>
-                            <option value="1.5">1.5 Bathrooms</option>
-                            <option value="2">2 Bathrooms</option>
-                            <option value="3+">3+ Bathrooms</option>
-                        </select>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="frequency">Cleaning Frequency</label>
-                        <select id="frequency" name="frequency">
-                            <option value="one-time">One-Time Cleaning</option>
-                            <option value="weekly">Weekly (15% OFF)</option>
-                            <option value="bi-weekly">Every 2 Weeks (10% OFF)</option>
-                            <option value="monthly">Monthly (5% OFF)</option>
-                        </select>
-                    </div>
-                </div>
-
-     
-                <div class="section__booking__form__field full-width">
-                    <label for="notes">Additional Notes / Specific Requests</label>
-                    <textarea id="notes" name="notes" rows="3"
-                        placeholder="Tell us anything we should know about your home or specific needs..."></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-submit">Request Free Quote</button>
-            </form>
-        </div>
-    </section> -->
-
-    <!-- FAQ SECTION -->
     <section id="faq" class="section__faq">
         <div class="container">
             <h2 class="section__title">Frequently Asked Questions</h2>
@@ -375,10 +367,42 @@
             </div>
         </div>
     </section>
+    <section class="section__trust-signals">
+        <div class="container">
+            <ul class="section__trust-signals__list">
+                <li class="section__trust-signals__list__item">
+                    <svg class="section__trust-signals__list__item__icon" width="40px" height="40px">
+                        <use href="./images/sprite.svg#protect"></use>
+                    </svg>
+                    <p>Licensed & Insured</p>
+                </li>
+                <li class="section__trust-signals__list__item">
+                    <svg class="section__trust-signals__list__item__icon" width="40px" height="40px">
+                        <use href="./images/sprite.svg#guarantee"></use>
+                    </svg>
+                    <p>Satisfaction Guaranteed</p>
+                </li>
+                <li class="section__trust-signals__list__item">
+                    <svg class="section__trust-signals__list__item__icon" width="40px" height="40px">
+                        <use href="./images/sprite.svg#schedule"></use>
+                    </svg>
+                    <p>Flexible Scheduling</p>
+                </li>
+                <li class="section__trust-signals__list__item">
+                    <svg class="section__trust-signals__list__item__icon" width="40px" height="40px">
+                        <use href="./images/sprite.svg#secure"></use>
+                    </svg>
+                    <p>Secure & Easy Payments</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
     </main>
 
     <!-- FOOTER SECTION (Згідно з контактами та дизайном) -->
-    <footer id="contact" class="section__footer" itemscope itemtype="https://schema.org/HouseCleaning">
+    <footer id="contact" class="section__footer">
         <div class="container sedtion__footer__container">
             <div class="section__footer__brand">
                 <h3 itemprop="name">Ameliva Home Cleaning</h3>
@@ -396,9 +420,9 @@
             <div class="section__footer__socials">
                 <p><strong>Follow Us:</strong></p>
                 <div class="section__footer__social__icons">
-                    <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook" width="24"
+                    <a href="#" aria-label="Facebook"><img src="./images/facebook.png" alt="Facebook" width="24"
                             height="24"></a>
-                    <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram" width="24"
+                    <a href="#" aria-label="Instagram"><img src="./images/instagram.png" alt="Instagram" width="24"
                             height="24"></a>
                 </div>
             </div>
@@ -413,6 +437,7 @@
 
     </main>
     <script src="./js/menu.js"></script>
+    <!-- <script src="./js/slider.js"></script> -->
 </body>
 
 </html>

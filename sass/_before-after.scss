@@ -1,0 +1,26 @@
+@use "variables" as *;
+
+.section__before-after {
+    padding: 30px 0;
+}
+
+.section__before-after__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+
+    overflow: scroll;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    padding: 40px 0;
+    align-items: stretch;
+}
+
+.section__before-after__list__item {
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    width: 300px;
+    position: relative;
+}

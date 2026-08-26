@@ -91,19 +91,24 @@ input {
 }
 
 .btn-primary {
+    display: inline-block;
     background-color: $color-teal-medium;
     color: $color-white;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $color-teal-dark;
     }
 }
 
 .btn-secondary {
+    display: inline-block;
     background-color: $color-teal-dark;
     color: $color-white;
+    width: 250px;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $color-teal-medium;
     }
 }

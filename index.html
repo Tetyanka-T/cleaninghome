@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ameliva Home Cleaning | Professional Cleaning Services in Chicago</title>
+    <link rel="shortcut icon" href="./images/ameliva-logo.png" type="image/x-icon" />
     <meta name="description"
         content="Professional residential and commercial cleaning services in Chicago & surrounding suburbs. Standard, deep, move-in/out, and Airbnb turnovers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@
 
 <body>
     <header class="header">
-        <div class="container header__container__menu">
+        <div class="header__container__menu">
             <a href="#index.html">
                 <img src="images/ameliva-logo.png" class="header__container__menu__logo" alt="Ameliva Logo">
             </a>
@@ -51,7 +52,7 @@
             <a href="#index.html" class="logo__container__descktop">
                 <img src="images/ameliva-logo.png" class="header__container__desctop__logo" alt="Ameliva Logo">
             </a>
-            <div class="container section__hero__content">
+            <div class="section__hero__content">
                 <h1 class="section__hero__title">Professional cleaning services</h1>
                 <p class="section__hero__description">
                     Chicago & Surrounding Suburbs
@@ -117,7 +118,6 @@
 
 
     <section id="about" class="section__why-us">
-        <img src="images/bubbles.png" class="section__why-us__bubbles" alt="bubbles">
         <div class="container section__why-us__content">
             <h2 class="section__title">Why Choose Ameliva?</h2>
             <p class="section__title__decor"></p>
@@ -340,32 +340,74 @@
         <div class="container">
             <h2 class="section__title">Frequently Asked Questions</h2>
 
-            <div class="section__faq__list">
-                <details>
-                    <summary>Do I need to provide cleaning supplies or equipment?</summary>
-                    <p>No. Our team arrives fully prepared with professional cleaning supplies and modern equipment
-                        needed to complete the service.</p>
-                </details>
+            <ul class="section__faq__list">
+                <li class="section__faq__list__item">
+                    <p class="section__faq__list__item__q">Do I need to provide cleaning supplies or equipment?</p>
+                    <p class="section__faq__list__item__a">No. Our team arrives fully prepared with professional
+                        cleaning supplies and modern equipment
+                        needed to complete the service. If you have specific products you prefer us to use, please let
+                        us know in advance.</p>
+                </li>
 
-                <details>
-                    <summary>Do I need to be home during the cleaning service?</summary>
-                    <p>No. Many of our clients provide access instructions before the appointment. We respect your
+                <li class="section__faq__list__item">
+                    <p class="section__faq__list__item__q">Do I need to be home during the cleaning service?</p>
+                    <p class="section__faq__list__item__a">No. Many of our clients provide access instructions before
+                        the appointment. We respect your
                         privacy and treat every home with care.</p>
-                </details>
+                </li>
 
-                <details>
-                    <summary>How is the cleaning price determined?</summary>
-                    <p>Pricing depends on home size, bedrooms/bathrooms count, cleaning type, and property condition. We
+                <li class="section__faq__list__item">
+                    <p class="section__faq__list__item__q">How is the cleaning price determined?</p>
+                    <p class="section__faq__list__item__a">Pricing depends on home size, bedrooms/bathrooms count,
+                        cleaning type, and property condition. We
                         provide clear estimates before starting.</p>
-                </details>
+                </li>
 
-                <details>
-                    <summary>Do you offer recurring cleaning discounts?</summary>
-                    <p>Yes! We offer 15% OFF for Weekly cleanings, 10% OFF for Bi-Weekly cleanings, and 5% OFF for
-                        Monthly plans.</p>
-                </details>
-            </div>
+                <li class="section__faq__list__item">
+                    <p class="section__faq__list__item__q">Do you offer recurring cleaning discounts?</p>
+                    <p class="section__faq__list__item__a">Yes. We offer weekly cleaning, every two weeks cleaning,
+                        monthly cleaning. Recurring clients receive priority scheduling and maintenance pricing.
+                    </p>
+                </li>
+                <li class="section__faq__list__item">
+                    <p class="section__faq__list__item__q">How long does a cleaning appointment take?</p>
+                    <p class="section__faq__list__item__a">The time depends on the size and condition of your home and
+                        the type of cleaning selected. During your estimate, we can provide an approximate timeframe.
+                    </p>
+                </li>
+            </ul>
         </div>
+    </section>
+    <section class="section__booking">
+        <div class="container">
+            <h3 class="section__title">How to Book Your Cleaning</h3>
+            <p class="sectioion__description">Booking your cleaning service with AMELIVA HOME CLEANING is simple.</p>
+            <ul class="section__booking__list">
+                <li class="section__booking__list__item"> 1. Request a Free Estimate
+                    Tell us about your home, property, and cleaning needs.</li>
+                <li class="section__booking__list__item"> 2. Receive Your Personalized Quote
+                    We’ll provide a clear estimate based on the details of your cleaning.</li>
+                <li class="section__booking__list__item">
+                    3. Choose Your Preferred Date & Time
+                    Select a convenient appointment that works with your schedule.</li>
+                <li class="section__booking__list__item"> 4. Relax & Let Us Handle the Cleaning
+                    Our professional team arrives prepared and ready to transform your space.</li>
+            </ul>
+            <svg class="section__booking__icon" width="40px" height="40px">
+                <use href="./images/sprite.svg#stars"></use>
+            </svg>
+            <a href="./booking.html" class="btn btn-primary header__container__nav__button">Book Now</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
     </section>
     <section class="section__trust-signals">
         <div class="container">
@@ -401,30 +443,27 @@
 
     </main>
 
-    <!-- FOOTER SECTION (Згідно з контактами та дизайном) -->
     <footer id="contact" class="section__footer">
-        <div class="container sedtion__footer__container">
+        <div class="container section__footer__container">
             <div class="section__footer__brand">
-                <h3 itemprop="name">Ameliva Home Cleaning</h3>
+                <img class="section__footer__logo" src="./images/logo-footer.png" />
                 <p>We clean. You relax.</p>
-                <p class="service-area-text">Serving Chicago & Surrounding Suburbs (Lincoln Park, Lakeview, Logan
-                    Square, Oak Park & more).</p>
             </div>
-
+            <p class="section__footer__area">Serving Chicago & Surrounding Suburbs (Lincoln Park, Lakeview, Logan
+                Square, Oak Park & more)</p>
             <div class="section__footer__contacts">
-                <p><strong>Contact Us:</strong></p>
                 <p>Phone: <a href="tel:+17731234567" itemprop="telephone">(773) 123-4567</a></p>
                 <p>Email: <a href="mailto:info@amelivacleaning.com" itemprop="email">info@amelivacleaning.com</a></p>
             </div>
 
             <div class="section__footer__socials">
-                <p><strong>Follow Us:</strong></p>
-                <div class="section__footer__social__icons">
-                    <a href="#" aria-label="Facebook"><img src="./images/facebook.png" alt="Facebook" width="24"
-                            height="24"></a>
-                    <a href="#" aria-label="Instagram"><img src="./images/instagram.png" alt="Instagram" width="24"
-                            height="24"></a>
-                </div>
+                <p>Follow Us:</p>
+
+                <a href="#" aria-label="Facebook"><img src="./images/facebook.png" alt="Facebook" width="24"
+                        height="24"></a>
+                <a href="#" aria-label="Instagram"><img src="./images/instagram.png" alt="Instagram" width="24"
+                        height="24"></a>
+
             </div>
         </div>
 
@@ -437,7 +476,6 @@
 
     </main>
     <script src="./js/menu.js"></script>
-    <!-- <script src="./js/slider.js"></script> -->
 </body>
 
 </html>

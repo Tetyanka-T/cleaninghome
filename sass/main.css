@@ -78,18 +78,21 @@ input {
 }
 
 .btn-primary {
+  display: inline-block;
   background-color: #00A3B1;
   color: #FFFFFF;
 }
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus {
   background-color: #0C6274;
 }
 
 .btn-secondary {
+  display: inline-block;
   background-color: #0C6274;
   color: #FFFFFF;
+  width: 250px;
 }
-.btn-secondary:hover {
+.btn-secondary:hover, .btn-secondary:focus {
   background-color: #00A3B1;
 }
 
@@ -142,6 +145,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 @media screen and (min-width: 992px) {
   .header__container__menu {
@@ -151,7 +155,7 @@ input {
 
 .header__container__menu__logo {
   width: 100px;
-  height: 100px;
+  height: auto;
 }
 
 .burger-menu {
@@ -286,17 +290,27 @@ body.no-scroll {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 100px 0px 200px 0px;
+  padding: 100px 20px 200px 20px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .section__hero {
-    padding: 100px 0px 200px 0px;
+    padding: 100px 40px 200px 40px;
   }
 }
 @media screen and (min-width: 992px) {
   .section__hero {
-    padding: 200px 0px 200px 0px;
+    padding: 200px 40px 200px 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__hero {
+    padding: 200px 200px 200px 200px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .section__hero {
+    padding: 250px 200px 200px 250px;
   }
 }
 
@@ -314,7 +328,7 @@ body.no-scroll {
 
 .header__container__desctop__logo {
   width: 400px;
-  height: 400px;
+  height: auto;
 }
 
 .section__hero__content {
@@ -365,6 +379,11 @@ body.no-scroll {
   bottom: 0;
   left: 0;
 }
+@media screen and (min-width: 1200px) {
+  .section__hero__wave {
+    display: none;
+  }
+}
 
 .section__hero__icon {
   width: 30px;
@@ -388,6 +407,11 @@ body.no-scroll {
     height: 80px;
     right: 150px;
     bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__hero__icon {
+    fill: #0C6274;
   }
 }
 
@@ -569,12 +593,12 @@ body.no-scroll {
 }
 
 .section__prise__minimum {
-  margin-top: 20px;
+  margin-top: 30px;
   color: #0C6274;
 }
 
 .section__prise__conditions {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .section__discount {
@@ -587,12 +611,12 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .section__discount {
-    padding: 100px 0px 100px 0px;
+    padding: 80px 0px 80px 0px;
   }
 }
 @media screen and (min-width: 992px) {
   .section__discount {
-    padding: 200px 0px 200px 0px;
+    padding: 100px 0px 100px 0px;
   }
 }
 
@@ -627,6 +651,11 @@ body.no-scroll {
 .section__before-after {
   padding: 30px 0;
 }
+@media screen and (min-width: 768px) {
+  .section__before-after {
+    padding: 50px;
+  }
+}
 
 .section__before-after__list {
   display: grid;
@@ -646,6 +675,45 @@ body.no-scroll {
   scroll-snap-align: center;
   width: 300px;
   position: relative;
+}
+
+.section__booking {
+  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.4) 55%, transparent 90%), url(../images/booking.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0px 50px 0px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .section__booking {
+    padding: 80px 0px 80px 0px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section__booking {
+    padding: 100px 0px 100px 0px;
+  }
+}
+
+.section__booking__list {
+  margin: 20px 0;
+}
+
+.section__booking__list__item {
+  margin-bottom: 10px;
+}
+.section__booking__list__item:last-child {
+  margin-bottom: 0;
+}
+
+.section__booking__icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 50px;
+  right: 70px;
+  fill: #0C6274;
 }
 
 .section__trust-signals {
@@ -741,54 +809,81 @@ body.no-scroll {
 .section__faq {
   padding: 60px 0;
   background-color: #F4FAFB;
-}
-.section__faq .section__faqlist {
-  max-width: 800px;
   margin: 0 auto;
 }
-.section__faq .section__faqlist details {
-  background: #FFFFFF;
-  border: 1px solid #D6EDF0;
-  border-radius: 8px;
+
+.section__faq__list {
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.section__faq__list__item {
+  border-bottom: 1px solid #D6EDF0;
   margin-bottom: 12px;
   padding: 16px;
 }
-.section__faq .section__faqlist details summary {
+.section__faq__list__item .section__faq__list__item__a {
+  display: none;
+}
+.section__faq__list__item:hover .section__faq__list__item__a, .section__faq__list__item:focus .section__faq__list__item__a {
+  display: block;
+}
+
+.section__faq__list__item__q {
   font-weight: 700;
   color: #0C6274;
   cursor: pointer;
 }
-.section__faq .section__faqlist details p {
+
+.section__faq__list__item__a {
   margin-top: 12px;
   color: #607274;
 }
 
 .section__footer {
   background-color: #0C6274;
-  color: #FFFFFF;
-  padding-top: 48px;
+  padding-top: 20px;
+  color: #E8F6F8;
+  font-size: 14px;
 }
-.section__footer .section__footer__container {
+
+.section__footer__container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
   padding-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
-  .section__footer .section__footer__container {
-    grid-template-columns: repeat(3, 1fr);
+  .section__footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
   }
 }
-.section__footer a {
-  color: #1E8D9B;
-  text-decoration: none;
-}
-.section__footer a:hover {
+
+.section__footer__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
-.section__footer .section__footer__bottom {
+
+.section__footer__logo {
+  width: 80px;
+  height: auto;
+}
+
+.section__footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
   text-align: center;
   font-size: 0.875rem;
+}
+
+.section__footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

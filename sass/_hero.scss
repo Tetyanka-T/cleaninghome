@@ -10,15 +10,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 100px 0px 200px 0px;
+    padding: 100px 20px 200px 20px;
     position: relative;
 
     @media screen and (min-width: 768px) {
-        padding: 100px 0px 200px 0px;
+        padding: 100px 40px 200px 40px;
     }
 
     @media screen and (min-width: 992px) {
-        padding: 200px 0px 200px 0px;
+        padding: 200px 40px 200px 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 200px 200px 200px 200px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        padding: 250px 200px 200px 250px;
     }
 }
 
@@ -36,7 +44,7 @@
 
 .header__container__desctop__logo {
     width: 400px;
-    height: 400px;
+    height: auto;
 }
 
 .section__hero__content {
@@ -44,7 +52,6 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 40px;
-
 
     & button {
         width: 200px;
@@ -55,6 +62,8 @@
         width: 100%;
         padding: 0;
     }
+
+
 }
 
 .section__hero__title {
@@ -70,6 +79,8 @@
     @media screen and (min-width: 768px) {
         font-size: 50px;
     }
+
+
 }
 
 
@@ -90,6 +101,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
+
+    @media screen and (min-width: 1200px) {
+        display: none;
+
+    }
+
+
 }
 
 .section__hero__icon {
@@ -112,5 +130,10 @@
         height: 80px;
         right: 150px;
         bottom: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        fill: $color-teal-dark;
+
     }
 }

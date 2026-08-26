@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+.section__booking {
+    background-image: linear-gradient(to right,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0.95) 30%,
+            rgba(255, 255, 255, 0.4) 55%,
+            transparent 90%), url(../images/booking.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0px 50px 0px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        padding: 80px 0px 80px 0px;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 100px 0px 100px 0px;
+    }
+}
+
+.section__booking__list {
+    margin: 20px 0;
+}
+
+.section__booking__list__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section__booking__icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 70px;
+    fill: $color-teal-dark;
+}

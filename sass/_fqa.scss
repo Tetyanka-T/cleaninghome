@@ -3,28 +3,43 @@
 .section__faq {
     padding: 60px 0;
     background-color: $color-card-bg;
+    margin: 0 auto;
+}
 
-    .section__faqlist {
-        max-width: 800px;
-        margin: 0 auto;
+.section__faq__list {
+    max-width: 800px;
+    margin-top: 20px;
 
-        details {
-            background: $color-white;
-            border: 1px solid $color-border;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            padding: 16px;
+}
 
-            summary {
-                font-weight: 700;
-                color: $color-teal-dark;
-                cursor: pointer;
-            }
+.section__faq__list__item {
+    // background: $color-white;
+    border-bottom: 1px solid $color-border;
 
-            p {
-                margin-top: 12px;
-                color: $color-text-muted;
-            }
-        }
+    margin-bottom: 12px;
+    padding: 16px;
+
+    & .section__faq__list__item__a {
+        display: none;
     }
+
+    &:hover,
+    &:focus {
+        .section__faq__list__item__a {
+            display: block;
+        }
+
+    }
+}
+
+.section__faq__list__item__q {
+    font-weight: 700;
+    color: $color-teal-dark;
+    cursor: pointer;
+
+}
+
+.section__faq__list__item__a {
+    margin-top: 12px;
+    color: $color-text-muted;
 }

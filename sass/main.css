@@ -100,7 +100,7 @@ input {
   text-align: center;
   font-size: 30px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .section__title__decor {
@@ -111,7 +111,7 @@ input {
 
 .section__subtitle {
   text-align: center;
-  color: #607274;
+  font-weight: 600;
   margin-bottom: 32px;
   font-size: 1.1rem;
 }
@@ -521,21 +521,22 @@ body.no-scroll {
 
 .section__price__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 10px;
-  overflow: scroll;
-  scroll-snap-type: both mandatory;
-  scroll-padding: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: min-max(300px, 1fr);
+  gap: 15px;
+  padding-bottom: 30px;
+  overflow-x: scroll;
+  scroll-padding: 2rem;
   padding: 30px 0;
-  align-items: stretch;
+  scrollbar-width: thin;
+  scrollbar-color: #00A3B1 #E8F6F8;
 }
 
 .section__price__list__item {
   display: flex;
   flex-direction: column;
-  scroll-snap-align: center;
-  width: 300px;
+  width: 280px;
+  height: 100%;
   position: relative;
 }
 
@@ -750,58 +751,67 @@ body.no-scroll {
 
 .section__booking {
   padding: 60px 0;
+  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.4) 55%, transparent 90%), url(../images/booking.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0px 50px 0px;
 }
-.section__booking .section__booking__form {
+
+.section__booking__form {
   background: #FFFFFF;
   border: 1px solid #D6EDF0;
   border-radius: 16px;
   padding: 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
-@media screen and (min-width: 768px) {
-  .section__booking .section__booking__form {
+@media screen and (min-width: 992px) {
+  .section__booking__form {
     padding: 40px;
   }
 }
-.section__booking .section__booking__form__group-row {
+
+.section__booking__form__group-row {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
   margin-bottom: 16px;
 }
-@media screen and (min-width: 768px) {
-  .section__booking .section__booking__form__group-row {
+@media screen and (min-width: 992px) {
+  .section__booking__form__group-row {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.section__booking .section__booking__form__field {
+
+.section__booking__form__field {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.section__booking .section__booking__form__field.full-width {
+.section__booking__form__field.full-width {
   margin-bottom: 24px;
 }
-.section__booking .section__booking__form__field label {
+.section__booking__form__field label {
   font-size: 0.9rem;
   font-weight: 600;
   color: #0C6274;
 }
-.section__booking .section__booking__form__field input,
-.section__booking .section__booking__form__field select,
-.section__booking .section__booking__form__field textarea {
+.section__booking__form__field input,
+.section__booking__form__field select,
+.section__booking__form__field textarea {
   padding: 12px 16px;
   border: 1px solid #D6EDF0;
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
 }
-.section__booking .section__booking__form__field input:focus,
-.section__booking .section__booking__form__field select:focus,
-.section__booking .section__booking__form__field textarea:focus {
+.section__booking__form__field input:focus,
+.section__booking__form__field select:focus,
+.section__booking__form__field textarea:focus {
   border-color: #00A3B1;
 }
-.section__booking .btn-submit {
+
+.btn-submit {
   width: 100%;
   padding: 16px;
 }
@@ -840,6 +850,143 @@ body.no-scroll {
   color: #607274;
 }
 
+.section__policies {
+  padding: 80px 0;
+  background-color: #E8F6F8;
+}
+
+.section__policies__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.section__policies__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .section__policies__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+.section__policies__card {
+  background-color: #F4FAFB;
+  border: 1px solid #D6EDF0;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.section__policies__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(12, 98, 116, 0.06);
+}
+
+.section__policies__icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #E8F6F8;
+  color: #00A3B1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__policies__content {
+  flex-grow: 1;
+}
+.section__policies__content h3 {
+  color: #0C6274;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.section__policies__content p {
+  color: #607274;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.section__policies__content p:last-child {
+  margin-bottom: 0;
+}
+
+.policy__card__accent {
+  border-color: #00A3B1;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.policy__card__accent .section__policies__icon {
+  background-color: #00A3B1;
+  color: #FFFFFF;
+}
+.policy__card__accent .section__policies__highlight-box {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background-color: #E8F6F8;
+  border-left: 3px solid #00A3B1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #2A3A3D;
+}
+
+.section__policies__content__policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+.section__policies__content__policy-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #2A3A3D;
+  line-height: 1.5;
+}
+.section__policies__content__policy-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00A3B1;
+  font-size: 0.75rem;
+}
+
+.section__policies__content__payment-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.section__policies__content__payment-pills .pill {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0C6274;
+  background-color: #E8F6F8;
+  border: 1px solid #D6EDF0;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* 📱 Мобільна адаптація */
+@media (max-width: 576px) {
+  .section__policies__card {
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+  }
+  .section__policies__card .section__policies__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 .section__footer {
   background-color: #0C6274;
   padding-top: 20px;
@@ -874,6 +1021,15 @@ body.no-scroll {
   height: auto;
 }
 
+.section__footer__policies {
+  display: inline-block;
+  color: #FFFFFF;
+  border-bottom: 1px #FFFFFF solid;
+  text-align: center;
+  width: 180px;
+  margin: 0 auto;
+}
+
 .section__footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 0;
@@ -886,4 +1042,8 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.section__footer__rights-reserved {
+  margin-top: 10px;
 }

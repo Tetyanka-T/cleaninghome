@@ -1,0 +1,151 @@
+@use "variables" as *;
+
+.section__policies {
+    padding: 80px 0;
+    background-color: $color-bg-light;
+}
+
+.section__policies__header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+
+}
+
+.section__policies__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+}
+
+
+.section__policies__card {
+    background-color: $color-card-bg;
+    border: 1px solid $color-border;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(12, 98, 116, 0.06);
+    }
+}
+
+.section__policies__icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: $color-bg-light;
+    color: $color-teal-medium;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__policies__content {
+    flex-grow: 1;
+
+    h3 {
+        color: $color-teal-dark;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    p {
+        color: $color-text-muted;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.policy__card__accent {
+    border-color: $color-teal-medium;
+    background-color: $color-white;
+    position: relative;
+
+    .section__policies__icon {
+        background-color: $color-teal-medium;
+        color: $color-white;
+    }
+
+    .section__policies__highlight-box {
+        margin-top: 16px;
+        padding: 12px 16px;
+        background-color: $color-bg-light;
+        border-left: 3px solid $color-teal-medium;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        color: $color-text-main;
+    }
+}
+
+.section__policies__content__policy-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+
+    li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        color: $color-text-main;
+        line-height: 1.5;
+
+        &::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $color-teal-medium;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+.section__policies__content__payment-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+
+    .pill {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: $color-teal-dark;
+        background-color: $color-bg-light;
+        border: 1px solid $color-border;
+        padding: 6px 14px;
+        border-radius: 20px;
+    }
+}
+
+
+/* 📱 Мобільна адаптація */
+@media (max-width: 576px) {
+    .section__policies__card {
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+
+        .section__policies__icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

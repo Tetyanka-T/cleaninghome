@@ -18,22 +18,24 @@
 
 .section__price__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    grid-auto-columns: min-max(300px, 1fr);
+    gap: 15px;
+    padding-bottom: 30px;
+    overflow-x: scroll;
 
-    overflow: scroll;
-    scroll-snap-type: both mandatory;
-    scroll-padding: 1rem;
+    scroll-padding: 2rem;
     padding: 30px 0;
-    align-items: stretch;
+
+    scrollbar-width: thin;
+    scrollbar-color: $color-teal-medium $color-bg-light;
 }
 
 .section__price__list__item {
     display: flex;
     flex-direction: column;
-    scroll-snap-align: center;
-    width: 300px;
+    width: 280px;
+    height: 100%;
     position: relative;
 
 }

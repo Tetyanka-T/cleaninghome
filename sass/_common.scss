@@ -11,9 +11,6 @@ body {
     letter-spacing: 0.02;
 }
 
-// body._lock {
-//   overflow: hidden;
-// }
 img {
     display: block;
     max-width: 100%;
@@ -22,14 +19,6 @@ img {
 html {
     scroll-behavior: smooth;
 }
-
-// .wrapper {
-//   height: 100vh;
-//   overflow-y: auto;
-//   overflow-x: hidden;
-//   perspective: 10px;
-//   scroll-behavior: smooth; 
-// }
 
 
 a {
@@ -117,7 +106,7 @@ input {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .section__title__decor {
@@ -128,45 +117,12 @@ input {
 
 .section__subtitle {
     text-align: center;
-    color: $color-text-muted;
+    font-weight: 600;
+    // color: $color-teal-medium;
     margin-bottom: 32px;
     font-size: 1.1rem;
 }
 
-// .section__title {
-//     margin-bottom: 40px;
-//     font-family: $accent-font;
-//     font-size: 22px;
-//     font-weight: 600;
-//     color: $color-teal-dark;
-//     text-align: start;
-//     text-transform: uppercase;
-
-//     // @media screen and (min-width: 768px) {
-//     //     font-size: 30px;
-
-//     //     & span {
-//     //         display: block;
-//     //         margin-left: 210px;
-//     //         text-shadow: 10px 0 15px $text-color;
-//     //     }
-//     // }
-
-//     // @media screen and (min-width: 1200px) {
-//     //     font-size: 40px;
-
-//     //     & span {
-//     //         display: block;
-//     //         margin-left: 280px;
-//     //     }
-//     // }
-// }
-
-
-
-// .trust-signals-section {
-//     background-color: $color-bg-light;
-// }
 
 // .animation {
 //   opacity: 0;

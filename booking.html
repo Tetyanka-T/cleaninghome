@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ameliva Home Cleaning | Professional Cleaning Services in Chicago</title>
+    <link rel="shortcut icon" href="./images/ameliva-logo.png" type="image/x-icon" />
     <meta name="description"
         content="Professional residential and commercial cleaning services in Chicago & surrounding suburbs. Standard, deep, move-in/out, and Airbnb turnovers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,17 +13,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC541e3CH1XJ8A25154/zAW6f17489re6e2EB1bApQ+pjOHra68bfE3280+ZwLnVoA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./sass/main.css">
     </link>
 </head>
 
 <body>
     <section id="booking-form" class="section__booking">
+
         <div class="container">
-            <h2 class="section__title">Get Your Free Quote</h2>
+            <a href="/index.html">
+                <img src="images/ameliva-logo.png" class="header__container__menu__logo" alt="Ameliva Logo">
+            </a>
+            <h2 class="section__title">Book Your Cleaning</h2>
             <p class="section__subtitle">Tell us about your home and choose your preferred schedule.</p>
 
             <form class="section__booking__form" action="#" method="POST">
@@ -58,8 +62,9 @@
                             <option value="regular">Regular Cleaning</option>
                             <option value="deep">Deep Cleaning</option>
                             <option value="move-in-out">Move-In / Move-Out</option>
-                            <option value="airbnb">Airbnb Turnover</option>
+                            <option value="airbnb">Airbnb Cleaning</option>
                             <option value="office">Office Cleaning</option>
+                            <option value="office">Other</option>
                         </select>
                     </div>
                 </div>
@@ -69,28 +74,28 @@
                         <label for="bedrooms">Bedrooms</label>
                         <select id="bedrooms" name="bedrooms">
                             <option value="studio">Studio</option>
-                            <option value="1">1 Bedroom</option>
-                            <option value="2">2 Bedrooms</option>
-                            <option value="3">3 Bedrooms</option>
-                            <option value="4+">4+ Bedrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4+">4+</option>
                         </select>
                     </div>
                     <div class="section__booking__form__field">
                         <label for="bathrooms">Bathrooms</label>
                         <select id="bathrooms" name="bathrooms">
-                            <option value="1">1 Bathroom</option>
-                            <option value="1.5">1.5 Bathrooms</option>
-                            <option value="2">2 Bathrooms</option>
-                            <option value="3+">3+ Bathrooms</option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="3+">3+</option>
                         </select>
                     </div>
                     <div class="section__booking__form__field">
                         <label for="frequency">Cleaning Frequency</label>
                         <select id="frequency" name="frequency">
                             <option value="one-time">One-Time Cleaning</option>
-                            <option value="weekly">Weekly (15% OFF)</option>
-                            <option value="bi-weekly">Every 2 Weeks (10% OFF)</option>
-                            <option value="monthly">Monthly (5% OFF)</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="bi-weekly">Every 2 Weeks</option>
+                            <option value="monthly">Monthly</option>
                         </select>
                     </div>
                 </div>
@@ -102,10 +107,40 @@
                         placeholder="Tell us anything we should know about your home or specific needs..."></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-submit">Request Free Quote</button>
+                <button type="submit" class="btn btn-primary btn-submit">Book Your Cleaning Today</button>
             </form>
         </div>
     </section>
+    <footer id="contact" class="section__footer">
+        <div class="container">
+            <div class="section__footer__container">
+                <div class="section__footer__brand">
+                    <img class="section__footer__logo" src="./images/logo-footer.png" />
+                    <p>We clean. You relax.</p>
+                </div>
+                <p class="section__footer__area">Professional Cleaning Services in Chicago & Surrounding Suburbs</p>
+                <div class="section__footer__contacts">
+                    <p>Phone: <a href="tel:+17731234567" itemprop="telephone">(773) 123-4567</a></p>
+                    <p>Email: <a href="mailto:info@amelivacleaning.com" itemprop="email">info@amelivacleaning.com</a>
+                    </p>
+                </div>
+
+                <div class="section__footer__socials">
+                    <p>Follow Us:</p>
+
+                    <a href="#" aria-label="Facebook" target="_blank"><img src="./images/facebook.png" alt="Facebook"
+                            width="24" height="24"></a>
+                    <a href="#" aria-label="Instagram" target="_blank"><img src="./images/instagram.png" alt="Instagram"
+                            width="24" height="24"></a>
+                </div>
+            </div>
+            <div class="section__footer__bottom">
+                <a href="/policies.html" target="_blank" class="section__footer__policies">Service Terms &
+                    Policies</a>
+                <p class="section__footer__rights-reserved">&copy; 2026 Ameliva Home Cleaning. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

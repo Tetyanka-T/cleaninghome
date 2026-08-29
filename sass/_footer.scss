@@ -5,6 +5,7 @@
     padding-top: 20px;
     color: $color-bg-light;
     font-size: 14px;
+
 }
 
 .section__footer__container {
@@ -34,7 +35,14 @@
     height: auto;
 }
 
-.section__footer__area {}
+.section__footer__policies {
+    display: inline-block;
+    color: $color-white;
+    border-bottom: 1px $color-white solid;
+    text-align: center;
+    width: 180px;
+    margin: 0 auto;
+}
 
 .section__footer__bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -48,4 +56,8 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.section__footer__rights-reserved {
+    margin-top: 10px;
 }

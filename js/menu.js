@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerBtn = document.getElementById('burgerBtn');
   const mainNav = document.getElementById('mainNav');
   const navOverlay = document.getElementById('navOverlay');
-  const navLinks = document.querySelectorAll('.main-nav a');
+  const navLinks = document.querySelectorAll('.header__container__nav a');
 
   // Функція перемикання стану меню
   const toggleMenu = () => {
@@ -31,3 +31,4 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 });
+

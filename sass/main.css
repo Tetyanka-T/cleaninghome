@@ -286,7 +286,7 @@ body.no-scroll {
   }
 }
 .section__hero {
-  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.4) 55%, transparent 75%), url(../images/hero2.jpg);
+  background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.4) 55%, transparent 75%), url(../images/hero4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -372,6 +372,15 @@ body.no-scroll {
   .section__hero__description {
     font-size: 30px;
   }
+}
+
+.section__hero__enjoy {
+  color: #607274;
+  font-size: 16px;
+  font-weight: 500;
+}
+.section__hero__enjoy span {
+  color: #0C6274;
 }
 
 .section__hero__wave {
@@ -522,7 +531,6 @@ body.no-scroll {
 .section__price__list {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: min-max(300px, 1fr);
   gap: 15px;
   padding-bottom: 30px;
   overflow-x: scroll;
@@ -543,24 +551,51 @@ body.no-scroll {
 .section__price__list__item-card {
   background: #F4FAFB;
   border: 1px solid #D6EDF0;
+  border-radius: 20px;
   padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   transition: transform 0.3s ease;
+  position: relative;
 }
 .section__price__list__item-card:hover {
   transform: translateY(-5px);
 }
 
+.section__price__list__item-card__title-container {
+  display: flex;
+}
+
+.section__price__list__item-card__popular {
+  font-size: 12px;
+  background-color: #1E8D9B;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
 .section__price__list__item-card__title {
   margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.section__price__list__item-card__price {
+  font-weight: 600;
 }
 
 .section__price__list__item-card__description {
   color: #607274;
   font-size: 14px;
-  margin-bottom: 16px;
+  margin: 16px 0;
+}
+
+.section__price__list__item-card__list {
+  margin-bottom: 20px;
 }
 
 .section__price__list__item-card__list__item {
@@ -592,6 +627,10 @@ body.no-scroll {
   border: 1px solid #D6EDF0;
   margin: 0 auto;
 }
+.section__price__item-card__price-tag:hover, .section__price__item-card__price-tag:focus {
+  background-color: #00A3B1;
+  color: #FFFFFF;
+}
 
 .section__prise__minimum {
   margin-top: 30px;
@@ -600,6 +639,10 @@ body.no-scroll {
 
 .section__prise__conditions {
   margin-top: 20px;
+}
+.section__prise__conditions span {
+  color: #0C6274;
+  font-weight: 500;
 }
 
 .section__discount {
@@ -992,6 +1035,7 @@ body.no-scroll {
   padding-top: 20px;
   color: #E8F6F8;
   font-size: 14px;
+  position: relative;
 }
 
 .section__footer__container {
@@ -999,6 +1043,10 @@ body.no-scroll {
   grid-template-columns: 1fr;
   gap: 32px;
   padding-bottom: 40px;
+}
+.section__footer__container a {
+  color: #2A3A3D;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .section__footer__container {
@@ -1035,6 +1083,7 @@ body.no-scroll {
   padding: 20px 0;
   text-align: center;
   font-size: 0.875rem;
+  margin-bottom: 50px;
 }
 
 .section__footer__socials {
@@ -1046,4 +1095,16 @@ body.no-scroll {
 
 .section__footer__rights-reserved {
   margin-top: 10px;
+}
+
+.section__footer__button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4FAFB;
+  padding: 10px 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

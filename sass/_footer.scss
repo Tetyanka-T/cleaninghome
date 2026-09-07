@@ -5,6 +5,7 @@
     padding-top: 20px;
     color: $color-bg-light;
     font-size: 14px;
+    position: relative;
 
 }
 
@@ -13,6 +14,11 @@
     grid-template-columns: 1fr;
     gap: 32px;
     padding-bottom: 40px;
+
+    & a {
+        color: $color-text-main;
+        font-weight: 600;
+    }
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
@@ -49,6 +55,7 @@
     padding: 20px 0;
     text-align: center;
     font-size: 0.875rem;
+    margin-bottom: 50px;
 }
 
 .section__footer__socials {
@@ -60,4 +67,17 @@
 
 .section__footer__rights-reserved {
     margin-top: 10px;
+}
+
+.section__footer__button {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-card-bg;
+    padding: 10px 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }

@@ -13,60 +13,323 @@
     padding: 50px 0px 50px 0px;
 }
 
-.section__booking__form {
-    background: $color-white;
+.booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $color-teal-dark;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.booking-subtitle {
+    font-size: 16px;
+    color: $color-text-muted;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.booking-form {
+    background-color: $color-card-bg;
     border: 1px solid $color-border;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 
-    @media screen and (min-width: 992px) {
-        padding: 40px;
-    }
-}
+    &__section {
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-border;
 
-.section__booking__form__group-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-
-    @media screen and (min-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.section__booking__form__field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    &.full-width {
-        margin-bottom: 24px;
+        &:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 24px;
+        }
     }
 
-    label {
-        font-size: 0.9rem;
+    &__section-title {
+        font-size: 18px;
         font-weight: 600;
         color: $color-teal-dark;
+        margin-bottom: 20px;
     }
 
-    input,
-    select,
-    textarea {
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 640px) {
+            flex-direction: row;
+        }
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--half {
+            @media screen and (min-width: 640px) {
+                flex: 1;
+            }
+        }
+
+        &--third {
+            @media screen and (min-width: 640px) {
+                flex: 1;
+            }
+        }
+    }
+
+    &__label {
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-teal-dark;
+        margin-bottom: 8px;
+    }
+
+    /* Пола вводу (Text, Tel, Email, Select, Date, Textarea) */
+    &__input,
+    &__select,
+    &__textarea {
+        width: 100%;
         padding: 12px 16px;
+        font-size: 15px;
+        font-family: inherit;
+        color: $color-teal-dark;
+        background-color: $color-white;
         border: 1px solid $color-border;
-        border-radius: 8px;
-        font-size: 1rem;
+        border-radius: 12px;
         outline: none;
+        transition: all 0.25s ease;
+
+        &::placeholder {
+            color: $color-text-muted;
+        }
 
         &:focus {
             border-color: $color-teal-medium;
+            box-shadow: 0 0 0 3px rgba($color-teal-medium, 0.15);
         }
     }
-}
 
-.btn-submit {
-    width: 100%;
-    padding: 16px;
+    &__select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%200a4d4e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        padding-right: 40px;
+    }
+
+    &__input--date {
+        &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            opacity: 0.6;
+            filter: invert(30%) sepia(50%) saturate(1000%) hue-rotate(145deg);
+            transition: opacity 0.2s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    /* 1. ДОДАТКОВІ ОПЦІЇ (Чекбокси) */
+    &__checkbox-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 12px;
+    }
+
+    &__checkbox-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        user-select: none;
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .booking-form__checkbox-custom {
+            width: 20px;
+            height: 20px;
+            border: 2px solid $color-teal-light;
+            border-radius: 6px;
+            position: relative;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 2px;
+                width: 5px;
+                height: 10px;
+                border: solid $color-white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: opacity 0.2s ease;
+            }
+        }
+
+        .booking-form__checkbox-text {
+            font-size: 14px;
+            color: $color-text-muted;
+        }
+
+        &:has(input:checked) {
+            border-color: $color-teal-medium;
+            background-color: $color-teal-light;
+
+            .booking-form__checkbox-custom {
+                background-color: $color-teal-medium;
+                border-color: $color-teal-medium;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            .booking-form__checkbox-text {
+                color: $color-teal-dark;
+                font-weight: 500;
+            }
+        }
+
+        &:hover {
+            border-color: $color-teal-light;
+        }
+    }
+
+    /* 2. ВИБІР ЧАСУ (Радіо-кнопки) */
+    &__radio-group {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__radio-btn {
+        flex: 1;
+        cursor: pointer;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .booking-form__radio-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 6px;
+            background-color: $color-white;
+            border: 1px solid $color-border;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.25s ease;
+
+            strong {
+                font-size: 13px;
+                color: $color-text-muted;
+            }
+
+            small {
+                font-size: 11px;
+                color: $color-text-muted;
+                margin-top: 2px;
+            }
+        }
+
+        &:has(input:checked) .booking-form__radio-content {
+            border-color: $color-teal-medium;
+            background-color: $color-teal-medium;
+
+            strong,
+            small {
+                color: $color-white;
+            }
+        }
+
+        &:hover .booking-form__radio-content {
+            border-color: $color-teal-light;
+        }
+    }
+
+    /* 3. ЗГОДА З ПРАВИЛАМИ (Terms) */
+    &__terms {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        color: $color-text-muted;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+            accent-color: $color-teal-medium;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        a {
+            color: $color-teal-medium;
+            text-decoration: underline;
+
+            &:hover {
+                color: $color-teal-dark;
+            }
+        }
+    }
+
+    /* 4. КНОПКА ВІДПРАВКИ */
+    &__submit-btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: $color-white;
+        background-color: $color-teal-medium;
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba($color-teal-medium, 0.25);
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $color-teal-dark;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba($color-teal-medium, 0.35);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
 }

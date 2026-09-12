@@ -22,7 +22,8 @@
 }
 
 .section__discount__desc {
-    margin-bottom: 15px;
+    margin: 15px 0;
+    font-size: 16px;
 }
 
 .section__discount__list__item {
@@ -31,6 +32,8 @@
     margin-bottom: 10px;
     font-size: 0.95rem;
     color: $color-text-muted;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 1.4;
     transition: color 0.3s ease;
 

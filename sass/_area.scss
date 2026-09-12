@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+.section__area {
+    padding: 30px 0;
+}
+
+.section__area__subtitle {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-teal-light;
+}
+
+.section__area__desc {
+    margin-top: 20px;
+    font-size: 16px;
+    color: $color-text-muted;
+}
+
+.section__area__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.section__area__list__item {
+    color: $color-white;
+    background-color: $color-teal-light;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 16px;
+
+
+}

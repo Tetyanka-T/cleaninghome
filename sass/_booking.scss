@@ -28,6 +28,11 @@
 .section__booking__list__item {
     margin-bottom: 10px;
 
+    & span {
+        color: $color-teal-dark;
+        font-weight: 600;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }

@@ -154,7 +154,7 @@ input {
 }
 
 .header__container__menu__logo {
-  width: 100px;
+  width: 120px;
   height: auto;
 }
 
@@ -321,13 +321,13 @@ body.no-scroll {
   .logo__container__descktop {
     display: block;
     position: absolute;
-    top: -150px;
+    top: -100px;
     left: 0;
   }
 }
 
 .header__container__desctop__logo {
-  width: 400px;
+  width: 300px;
   height: auto;
 }
 
@@ -532,20 +532,33 @@ body.no-scroll {
   display: grid;
   grid-auto-flow: column;
   gap: 15px;
-  padding-bottom: 30px;
-  overflow-x: scroll;
-  scroll-padding: 2rem;
-  padding: 30px 0;
-  scrollbar-width: thin;
-  scrollbar-color: #00A3B1 #E8F6F8;
+  overflow-x: auto;
+  padding: 50px 0 20px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.section__price__list::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .section__price__list__item {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 300px;
   height: 100%;
   position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+@media screen and (min-width: 768px) {
+  .section__price__list__item {
+    width: 320px;
+  }
 }
 
 .section__price__list__item-card {
@@ -580,8 +593,9 @@ body.no-scroll {
 
 .section__price__list__item-card__title {
   margin-bottom: 8px;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  color: #607274;
 }
 
 .section__price__list__item-card__price {
@@ -645,6 +659,37 @@ body.no-scroll {
   font-weight: 500;
 }
 
+.section__price__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 30px 0;
+}
+.section__price__pagination .section__price__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #1E8D9B;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+.section__price__pagination .section__price__dot:hover {
+  opacity: 0.7;
+}
+.section__price__pagination .section__price__dot {
+  /* Активна крапочка стає довшою та виділяється темнішим телом */
+}
+.section__price__pagination .section__price__dot.active {
+  opacity: 1;
+  width: 26px;
+  border-radius: 12px;
+  background-color: #00A3B1;
+}
+
 .section__discount {
   background-image: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.4) 55%, transparent 75%), url(../images/discount.jpg);
   background-repeat: no-repeat;
@@ -665,7 +710,8 @@ body.no-scroll {
 }
 
 .section__discount__desc {
-  margin-bottom: 15px;
+  margin: 15px 0;
+  font-size: 16px;
 }
 
 .section__discount__list__item {
@@ -674,6 +720,8 @@ body.no-scroll {
   margin-bottom: 10px;
   font-size: 0.95rem;
   color: #607274;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 1.4;
   transition: color 0.3s ease;
 }
@@ -701,16 +749,26 @@ body.no-scroll {
   }
 }
 
+.section__before-after__desc {
+  margin-top: 10px;
+}
+
 .section__before-after__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 10px;
-  overflow: scroll;
-  scroll-snap-type: both mandatory;
-  scroll-padding: 1rem;
-  padding: 40px 0;
-  align-items: stretch;
+  grid-auto-flow: column;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 30px 0 30px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.section__before-after__list::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .section__before-after__list__item {
@@ -719,6 +777,84 @@ body.no-scroll {
   scroll-snap-align: center;
   width: 300px;
   position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}
+@media screen and (min-width: 768px) {
+  .section__before-after__list__item {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__before-after__list__item {
+    width: 500px;
+  }
+}
+
+.section__before__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 30px 0;
+}
+.section__before__pagination .section__before__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #1E8D9B;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+.section__before__pagination .section__before__dot:hover {
+  opacity: 0.7;
+}
+.section__before__pagination .section__before__dot {
+  /* Активна крапочка стає довшою та виділяється темнішим телом */
+}
+.section__before__pagination .section__before__dot.active {
+  opacity: 1;
+  width: 26px;
+  border-radius: 12px;
+  background-color: #00A3B1;
+}
+
+.section__area {
+  padding: 30px 0;
+}
+
+.section__area__subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #1E8D9B;
+}
+
+.section__area__desc {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #607274;
+}
+
+.section__area__list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section__area__list__item {
+  color: #FFFFFF;
+  background-color: #1E8D9B;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 16px;
 }
 
 .section__booking {
@@ -746,6 +882,10 @@ body.no-scroll {
 
 .section__booking__list__item {
   margin-bottom: 10px;
+}
+.section__booking__list__item span {
+  color: #0C6274;
+  font-weight: 600;
 }
 .section__booking__list__item:last-child {
   margin-bottom: 0;
@@ -801,62 +941,297 @@ body.no-scroll {
   padding: 50px 0px 50px 0px;
 }
 
-.section__booking__form {
-  background: #FFFFFF;
-  border: 1px solid #D6EDF0;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-@media screen and (min-width: 992px) {
-  .section__booking__form {
-    padding: 40px;
-  }
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.section__booking__form__group-row {
-  display: grid;
-  grid-template-columns: 1fr;
+.booking-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0C6274;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.booking-subtitle {
+  font-size: 16px;
+  color: #607274;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.booking-form {
+  background-color: #F4FAFB;
+  border: 1px solid #D6EDF0;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+.booking-form__section {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D6EDF0;
+}
+.booking-form__section:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 24px;
+}
+.booking-form__section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0C6274;
+  margin-bottom: 20px;
+}
+.booking-form__row {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   margin-bottom: 16px;
 }
-@media screen and (min-width: 992px) {
-  .section__booking__form__group-row {
-    grid-template-columns: repeat(3, 1fr);
+.booking-form__row:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 640px) {
+  .booking-form__row {
+    flex-direction: row;
   }
 }
-
-.section__booking__form__field {
+.booking-form__group {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  width: 100%;
 }
-.section__booking__form__field.full-width {
-  margin-bottom: 24px;
+@media screen and (min-width: 640px) {
+  .booking-form__group--half {
+    flex: 1;
+  }
 }
-.section__booking__form__field label {
-  font-size: 0.9rem;
-  font-weight: 600;
+@media screen and (min-width: 640px) {
+  .booking-form__group--third {
+    flex: 1;
+  }
+}
+.booking-form__label {
+  font-size: 14px;
+  font-weight: 500;
   color: #0C6274;
+  margin-bottom: 8px;
 }
-.section__booking__form__field input,
-.section__booking__form__field select,
-.section__booking__form__field textarea {
+.booking-form {
+  /* Пола вводу (Text, Tel, Email, Select, Date, Textarea) */
+}
+.booking-form__input, .booking-form__select, .booking-form__textarea {
+  width: 100%;
   padding: 12px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #0C6274;
+  background-color: #FFFFFF;
   border: 1px solid #D6EDF0;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 12px;
   outline: none;
+  transition: all 0.25s ease;
 }
-.section__booking__form__field input:focus,
-.section__booking__form__field select:focus,
-.section__booking__form__field textarea:focus {
+.booking-form__input::-moz-placeholder, .booking-form__select::-moz-placeholder, .booking-form__textarea::-moz-placeholder {
+  color: #607274;
+}
+.booking-form__input::placeholder, .booking-form__select::placeholder, .booking-form__textarea::placeholder {
+  color: #607274;
+}
+.booking-form__input:focus, .booking-form__select:focus, .booking-form__textarea:focus {
+  border-color: #00A3B1;
+  box-shadow: 0 0 0 3px rgba(0, 163, 177, 0.15);
+}
+.booking-form__select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%200a4d4e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.booking-form__input--date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  filter: invert(30%) sepia(50%) saturate(1000%) hue-rotate(145deg);
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.booking-form__input--date::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+.booking-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.booking-form {
+  /* 1. ДОДАТКОВІ ОПЦІЇ (Чекбокси) */
+}
+.booking-form__checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.booking-form__checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #D6EDF0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.booking-form__checkbox-card input[type=checkbox] {
+  display: none;
+}
+.booking-form__checkbox-card .booking-form__checkbox-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1E8D9B;
+  border-radius: 6px;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.booking-form__checkbox-card .booking-form__checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFFFFF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.booking-form__checkbox-card .booking-form__checkbox-text {
+  font-size: 14px;
+  color: #607274;
+}
+.booking-form__checkbox-card:has(input:checked) {
+  border-color: #00A3B1;
+  background-color: #1E8D9B;
+}
+.booking-form__checkbox-card:has(input:checked) .booking-form__checkbox-custom {
+  background-color: #00A3B1;
   border-color: #00A3B1;
 }
-
-.btn-submit {
+.booking-form__checkbox-card:has(input:checked) .booking-form__checkbox-custom::after {
+  opacity: 1;
+}
+.booking-form__checkbox-card:has(input:checked) .booking-form__checkbox-text {
+  color: #0C6274;
+  font-weight: 500;
+}
+.booking-form__checkbox-card:hover {
+  border-color: #1E8D9B;
+}
+.booking-form {
+  /* 2. ВИБІР ЧАСУ (Радіо-кнопки) */
+}
+.booking-form__radio-group {
+  display: flex;
+  gap: 8px;
+}
+.booking-form__radio-btn {
+  flex: 1;
+  cursor: pointer;
+}
+.booking-form__radio-btn input[type=radio] {
+  display: none;
+}
+.booking-form__radio-btn .booking-form__radio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 6px;
+  background-color: #FFFFFF;
+  border: 1px solid #D6EDF0;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+.booking-form__radio-btn .booking-form__radio-content strong {
+  font-size: 13px;
+  color: #607274;
+}
+.booking-form__radio-btn .booking-form__radio-content small {
+  font-size: 11px;
+  color: #607274;
+  margin-top: 2px;
+}
+.booking-form__radio-btn:has(input:checked) .booking-form__radio-content {
+  border-color: #00A3B1;
+  background-color: #00A3B1;
+}
+.booking-form__radio-btn:has(input:checked) .booking-form__radio-content strong,
+.booking-form__radio-btn:has(input:checked) .booking-form__radio-content small {
+  color: #FFFFFF;
+}
+.booking-form__radio-btn:hover .booking-form__radio-content {
+  border-color: #1E8D9B;
+}
+.booking-form {
+  /* 3. ЗГОДА З ПРАВИЛАМИ (Terms) */
+}
+.booking-form__terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #607274;
+  cursor: pointer;
+}
+.booking-form__terms input[type=checkbox] {
+  accent-color: #00A3B1;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.booking-form__terms a {
+  color: #00A3B1;
+  text-decoration: underline;
+}
+.booking-form__terms a:hover {
+  color: #0C6274;
+}
+.booking-form {
+  /* 4. КНОПКА ВІДПРАВКИ */
+}
+.booking-form__submit-btn {
   width: 100%;
   padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  background-color: #00A3B1;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 163, 177, 0.25);
+  transition: all 0.3s ease;
+}
+.booking-form__submit-btn:hover {
+  background-color: #0C6274;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 163, 177, 0.35);
+}
+.booking-form__submit-btn:active {
+  transform: translateY(0);
 }
 
 .section__faq {
@@ -1083,7 +1458,7 @@ body.no-scroll {
   padding: 20px 0;
   text-align: center;
   font-size: 0.875rem;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .section__footer__socials {
@@ -1107,4 +1482,85 @@ body.no-scroll {
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+}
+
+.section__footer__button.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+
+/* Стан після появи при скролі */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Затримка для каскадної появи карток/блокiв */
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+/* ==========================================
+   2. КНОПКА «ВГОРУ» (BACK TO TOP)
+   ========================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  /* Зсунуто вгору, щоб не перекривати мобільний CTA-бар */
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #00A3B1;
+  color: #FFFFFF;
+  border: 1px solid #D6EDF0;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Початково прихована */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+}
+.back-to-top:hover {
+  background-color: #0C6274;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+.back-to-top:active {
+  transform: translateY(0);
+}
+.back-to-top {
+  /* Активний стан (коли користувач прокрутив сторінку) */
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

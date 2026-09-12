@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ameliva Home Cleaning | Professional Cleaning Services in Chicago</title>
-    <link rel="shortcut icon" href="./images/ameliva-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <meta name="description"
         content="Professional residential and commercial cleaning services in Chicago & surrounding suburbs. Standard, deep, move-in/out, and Airbnb turnovers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,126 +22,191 @@
 <body>
     <section id="booking-form" class="section__booking">
 
-        <div class="container">
+        <div class="container booking-container">
             <a href="/index.html">
-                <img src="images/ameliva-logo.png" class="header__container__menu__logo" alt="Ameliva Logo">
+                <img src="images/logo.png" class="header__container__menu__logo" alt="Ameliva Logo">
             </a>
-            <h2 class="section__title">Book Your Cleaning</h2>
+            <h2 class="section__title">Ready to Come Home to a Cleaner Space?</h2>
             <p class="section__subtitle">Tell us about your home and choose your preferred schedule.</p>
 
-            <form class="section__booking__form" action="#" method="POST">
+            <form class="booking-form" action="#" method="POST">
+                <div class="booking-form__section">
+                    <h3 class="booking-form__section-title">1. Contact Information</h3>
 
-                <div class="section__booking__form__group-row">
-                    <div class="section__booking__form__field">
-                        <label for="fullName">Full Name *</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                    <div class="booking-form__row">
+                        <div class="booking-form__group booking-form__group--half">
+                            <label class="booking-form__label" for="client-name">Full Name *</label>
+                            <input type="text" id="client-name" name="name" class="booking-form__input"
+                                placeholder="John Doe" required>
+                        </div>
+
+                        <div class="booking-form__group booking-form__group--half">
+                            <label class="booking-form__label" for="client-phone">Phone Number *</label>
+                            <input type="tel" id="client-phone" name="phone" class="booking-form__input"
+                                placeholder="+1 (555) 000-0000" required>
+                        </div>
                     </div>
-                    <div class="section__booking__form__field">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(773) 000-0000" required>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+                    <div class="booking-form__row">
+                        <div class="booking-form__group booking-form__group--half">
+                            <label class="booking-form__label" for="client-email">Email Address *</label>
+                            <input type="email" id="client-email" name="email" class="booking-form__input"
+                                placeholder="example@mail.com" required>
+                        </div>
+
+                        <div class="booking-form__group booking-form__group--half">
+                            <label class="booking-form__label" for="client-address">Address *</label>
+                            <input type="text" id="client-address" name="address" class="booking-form__input"
+                                placeholder="Street address, Apartment / Suite" required>
+                        </div>
                     </div>
                 </div>
 
+                <div class="booking-form__section">
+                    <h3 class="booking-form__section-title">2. Service Details</h3>
 
-                <div class="section__booking__form__group-row">
-                    <div class="section__booking__form__field">
-                        <label for="city">City / Area *</label>
-                        <input type="text" id="city" name="city" placeholder="Chicago" required>
+                    <div class="booking-form__row">
+                        <div class="booking-form__group booking-form__group--third">
+                            <label class="booking-form__label" for="service-type">Cleaning Type *</label>
+                            <select id="service-type" name="service_type" class="booking-form__select" required>
+                                <option value="standard">Standard Cleaning</option>
+                                <option value="deep">Deep Cleaning</option>
+                                <option value="move">Move In / Move Out</option>
+                                <option value="airbnb">Airbnb / Rental Turnover</option>
+                                <option value="office">Office / Commercial</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-form__group booking-form__group--third">
+                            <label class="booking-form__label" for="bedrooms-count">Bedrooms</label>
+                            <select id="bedrooms-count" name="bedrooms" class="booking-form__select">
+                                <option value="studio">Studio</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4+">4+ Bedrooms</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-form__group booking-form__group--third">
+                            <label class="booking-form__label" for="bathrooms-count">Bathrooms</label>
+                            <select id="bathrooms-count" name="bathrooms" class="booking-form__select">
+                                <option value="1">1 Bathroom</option>
+                                <option value="1.5">1.5 Bathroom</option>
+                                <option value="2">2 Bathrooms</option>
+                                <option value="3">3 Bathrooms</option>
+                                <option value="4+">4+ Bathrooms</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="section__booking__form__field">
-                        <label for="zipCode">ZIP Code *</label>
-                        <input type="text" id="zipCode" name="zipCode" placeholder="60614" required>
+                </div>
+                <div class="booking-form__section">
+                    <h3 class="booking-form__section-title">3. Add-On Services (Optional)</h3>
+
+                    <div class="booking-form__checkbox-grid">
+                        <label class="booking-form__checkbox-card">
+                            <input type="checkbox" name="addons[]" value="oven">
+                            <span class="booking-form__checkbox-custom"></span>
+                            <span class="booking-form__checkbox-text">Inside Oven</span>
+                        </label>
+
+                        <label class="booking-form__checkbox-card">
+                            <input type="checkbox" name="addons[]" value="fridge">
+                            <span class="booking-form__checkbox-custom"></span>
+                            <span class="booking-form__checkbox-text">Inside Refrigerator</span>
+                        </label>
+
+                        <label class="booking-form__checkbox-card">
+                            <input type="checkbox" name="addons[]" value="windows">
+                            <span class="booking-form__checkbox-custom"></span>
+                            <span class="booking-form__checkbox-text">Interior Windows</span>
+                        </label>
+
+                        <label class="booking-form__checkbox-card">
+                            <input type="checkbox" name="addons[]" value="cabinets">
+                            <span class="booking-form__checkbox-custom"></span>
+                            <span class="booking-form__checkbox-text">Inside Cabinets</span>
+                        </label>
+
+                        <label class="booking-form__checkbox-card">
+                            <input type="checkbox" name="addons[]" value="laundry">
+                            <span class="booking-form__checkbox-custom"></span>
+                            <span class="booking-form__checkbox-text">Laundry</span>
+                        </label>
+
+                        <label class="booking-form__checkbox-card">
+                            <input type="checkbox" name="addons[]" value="balcony">
+                            <span class="booking-form__checkbox-custom"></span>
+                            <span class="booking-form__checkbox-text">Baseboards</span>
+                        </label>
                     </div>
-                    <div class="section__booking__form__field">
-                        <label for="serviceType">Type of Cleaning *</label>
-                        <select id="serviceType" name="serviceType" required>
-                            <option value="regular">Regular Cleaning</option>
-                            <option value="deep">Deep Cleaning</option>
-                            <option value="move-in-out">Move-In / Move-Out</option>
-                            <option value="airbnb">Airbnb Cleaning</option>
-                            <option value="office">Office Cleaning</option>
-                            <option value="office">Other</option>
-                        </select>
+                </div>
+                <div class="booking-form__section">
+                    <h3 class="booking-form__section-title">4. Date & Time</h3>
+
+                    <div class="booking-form__row">
+                        <!-- Календар -->
+                        <div class="booking-form__group booking-form__group--half">
+                            <label class="booking-form__label" for="cleaning-date">Preferred Date *</label>
+                            <input type="date" id="cleaning-date" name="cleaning_date"
+                                class="booking-form__input booking-form__input--date" required>
+                        </div>
+
+                        <div class="booking-form__group booking-form__group--half">
+                            <label class="booking-form__label">Preferred Time *</label>
+                            <div class="booking-form__radio-group">
+
+                                <label class="booking-form__radio-btn">
+                                    <input type="radio" name="cleaning_time" value="morning" checked required>
+                                    <span class="booking-form__radio-content">
+                                        <strong>Morning</strong>
+                                        <small>8:00 - 12:00</small>
+                                    </span>
+                                </label>
+
+                                <label class="booking-form__radio-btn">
+                                    <input type="radio" name="cleaning_time" value="afternoon">
+                                    <span class="booking-form__radio-content">
+                                        <strong>Afternoon</strong>
+                                        <small>12:00 - 16:00</small>
+                                    </span>
+                                </label>
+
+                                <label class="booking-form__radio-btn">
+                                    <input type="radio" name="cleaning_time" value="evening">
+                                    <span class="booking-form__radio-content">
+                                        <strong>Evening</strong>
+                                        <small>16:00 - 20:00</small>
+                                    </span>
+                                </label>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="section__booking__form__group-row">
-                    <div class="section__booking__form__field">
-                        <label for="bedrooms">Bedrooms</label>
-                        <select id="bedrooms" name="bedrooms">
-                            <option value="studio">Studio</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4+">4+</option>
-                        </select>
+                <div class="booking-form__section">
+                    <div class="booking-form__group">
+                        <label class="booking-form__label" for="comments">Special Instructions / Comments</label>
+                        <textarea id="comments" name="comments" class="booking-form__textarea" rows="4"
+                            placeholder="Tell us anything we should know about your home or specific needs..."></textarea>
                     </div>
-                    <div class="section__booking__form__field">
-                        <label for="bathrooms">Bathrooms</label>
-                        <select id="bathrooms" name="bathrooms">
-                            <option value="1">1</option>
-                            <option value="1.5">1.5</option>
-                            <option value="2">2</option>
-                            <option value="3+">3+</option>
-                        </select>
-                    </div>
-                    <div class="section__booking__form__field">
-                        <label for="frequency">Cleaning Frequency</label>
-                        <select id="frequency" name="frequency">
-                            <option value="one-time">One-Time Cleaning</option>
-                            <option value="weekly">Weekly</option>
-                            <option value="bi-weekly">Every 2 Weeks</option>
-                            <option value="monthly">Monthly</option>
-                        </select>
+
+                    <div class="booking-form__group">
+                        <label class="booking-form__terms">
+                            <input type="checkbox" name="terms" required>
+                            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                    Policy</a>.</span>
+                        </label>
                     </div>
                 </div>
 
+                <button type="submit" class="booking-form__submit-btn">Complete Booking</button>
 
-                <div class="section__booking__form__field full-width">
-                    <label for="notes">Additional Notes / Specific Requests</label>
-                    <textarea id="notes" name="notes" rows="3"
-                        placeholder="Tell us anything we should know about your home or specific needs..."></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-submit">Book Your Cleaning Today</button>
             </form>
+
         </div>
     </section>
-    <footer id="contact" class="section__footer">
-        <div class="container">
-            <div class="section__footer__container">
-                <div class="section__footer__brand">
-                    <img class="section__footer__logo" src="./images/logo-footer.png" />
-                    <p>We clean. You relax.</p>
-                </div>
-                <p class="section__footer__area">Professional Cleaning Services in Chicago & Surrounding Suburbs</p>
-                <div class="section__footer__contacts">
-                    <p>Phone: <a href="tel:+12242248008" itemprop="telephone">224-224-8008</a></p>
-                    <p>Email: <a href="amelivahomecleaning@gmail.com" itemprop="email">amelivahomecleaning@gmail.com</a>
-                    </p>
-                </div>
-
-                <div class="section__footer__socials">
-                    <p>Follow Us:</p>
-
-                    <a href="https://www.facebook.com/profile.php?id=61593935253231" aria-label="Facebook"
-                        target="_blank"><img src="./images/facebook.png" alt="Facebook" width="24" height="24"></a>
-                    <a href="https://www.instagram.com/amelivahomecleaning/#" aria-label="Instagram"
-                        target="_blank"><img src="./images/instagram.png" alt="Instagram" width="24" height="24"></a>
-                </div>
-            </div>
-            <div class="section__footer__bottom">
-                <a href="./policies.html" target="_blank" class="section__footer__policies">Service Terms &
-                    Policies</a>
-                <p class="section__footer__rights-reserved">&copy; 2026 Ameliva Home Cleaning. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
 </body>
 
 </html>

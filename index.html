@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ameliva Home Cleaning | Professional Cleaning Services in Chicago</title>
-    <link rel="shortcut icon" href="./images/ameliva-logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <meta name="description"
         content="Professional residential and commercial cleaning services in Chicago & surrounding suburbs. Standard, deep, move-in/out, and Airbnb turnovers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     <header class="header">
         <div class="header__container__menu">
             <a href="/index.html">
-                <img src="images/ameliva-logo.png" class="header__container__menu__logo" alt="Ameliva Logo">
+                <img src="images/logo.png" class="header__container__menu__logo" alt="Ameliva Logo">
             </a>
             <button class="burger-menu" id="burgerBtn" aria-label="Toggle navigation">
                 <span></span>
@@ -39,7 +39,8 @@
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="./booking.html" target="_blank" class="btn btn-primary header__container__nav__button">Call Now</a>
+            <a href="tel:+12242248008" itemprop="telephone" class="btn btn-primary header__container__nav__button">Call
+                Now</a>
         </nav>
         <div class="header__container__nav__overlay" id="navOverlay"></div>
     </header>
@@ -47,14 +48,15 @@
     <section class="section__hero">
         <div class="section__hero__container">
             <a href="#index.html" class="logo__container__descktop">
-                <img src="images/ameliva-logo.png" class="header__container__desctop__logo" alt="Ameliva Logo">
+                <img src="images/logo.png" class="header__container__desctop__logo" alt="Ameliva Logo">
             </a>
             <div class="section__hero__content">
-                <h1 class="section__hero__title">Professional home cleaning services</h1>
-                <p class="section__hero__description">
+                <h1 class="section__hero__title reveal-on-scroll">Professional home cleaning services</h1>
+                <p class="section__hero__description reveal-on-scroll reveal-delay-1">
                     Chicago & Surrounding Suburbs
                 </p>
-                <a href="./booking.html" target="_blank" class="btn btn-secondary">GET A FREE QUOTE</a>
+                <a href="./booking.html" target="_blank" class="btn btn-secondary reveal-on-scroll reveal-delay-1">GET A
+                    FREE QUOTE</a>
                 <p class="section__hero__enjoy"><span>Come home to clean.</span> We take care of the cleaning so
                     you can enjoy your time.</p>
             </div>
@@ -68,9 +70,8 @@
         <svg class="section__hero__icon" width="40px" height="40px">
             <use href="./images/sprite.svg#stars"></use>
         </svg>
-
     </section>
-    <section class="section section__services" id="services">
+    <section class="section section__services reveal-on-scroll" id="services">
         <div class="container">
             <h2 class="section__title">Our Services</h2>
             <p class="section__title__decor"></p>
@@ -116,7 +117,7 @@
     </section>
 
 
-    <section id="about" class="section__why-us">
+    <section id="about" class="section__why-us reveal-on-scroll">
         <div class="container section__why-us__content">
             <h2 class="section__title">Why Choose Ameliva?</h2>
             <p class="section__title__decor"></p>
@@ -150,9 +151,10 @@
     </section>
 
 
-    <section id="price" class="section__price">
+    <section id="price" class="section__price reveal-on-scroll">
         <div class="container">
             <h2 class="section__title">Cleaning services for every home</h2>
+            <p class="section__title__decor"></p>
             <p class="section__price__description">From regular maintenance to detailed deep cleaning, choose the
                 service that fits your home and your schedule.</p>
             <ul class="section__price__list">
@@ -269,17 +271,25 @@
                     </article>
                 </li>
             </ul>
+            <div class="section__price__pagination">
+                <button class="section__price__dot active" aria-label="Go to slide 1"></button>
+                <button class="section__price__dot" aria-label="Go to slide 2"></button>
+                <button class="section__price__dot" aria-label="Go to slide 3"></button>
+                <button class="section__price__dot" aria-label="Go to slide 4"></button>
+                <button class="section__price__dot" aria-label="Go to slide 5"></button>
+                <button class="section__price__dot" aria-label="Go to slide 6"></button>
+            </div>
             <p class="section__prise__conditions"><span>Please note:</span> Starting prices are estimates. Final pricing
                 depends on home size, condition, bedrooms, bathrooms, location, cleaning type and additional services.
             </p>
         </div>
     </section>
-    <section class="section__discount">
+    <section class="section__discount reveal-on-scroll">
         <div class="container">
             <h3 class="section__title">Save More With Regular Service</h3>
-            <p class="section__discount__desc">Choose a recurring cleaning schedule and enjoy
-                convenient, consistent home
-                maintenance.</p>
+            <p class="section__title__decor"></p>
+            <p class="section__discount__desc">A clean home is easier to maintain when cleaning becomes part of your
+                routine. Choose a schedule that works for you.</p>
             <ul class="section__discount__list">
                 <li class="section__discount__list__item">Weekly Cleaning — 15% OFF</li>
                 <li class="section__discount__list__item">Every 2 Weeks — 10% OFF</li>
@@ -290,9 +300,11 @@
         </div>
     </section>
 
-    <section class="section__before-after">
+    <section class="section__before-after reveal-on-scroll">
         <div class="container">
-            <h3 class="section__title">Before / After</h3>
+            <h3 class="section__title">See the Difference</h3>
+            <p class="section__title__decor"></p>
+            <p class="section__before-after__desc">The best way to show our work is to let you see it.</p>
             <ul class="section__before-after__list">
                 <li class="section__before-after__list__item">
                     <img class="section__before-after__list__item__img" src="./images/before-after.jpg" />
@@ -319,74 +331,110 @@
                     <img class="section__before-after__list__item__img" src="./images/before-after7.jpg" />
                 </li>
             </ul>
+            <div class="section__before__pagination">
+                <button class="section__before__dot active" aria-label="Go to slide 1"></button>
+                <button class="section__before__dot" aria-label="Go to slide 2"></button>
+                <button class="section__before__dot" aria-label="Go to slide 3"></button>
+                <button class="section__before__dot" aria-label="Go to slide 4"></button>
+                <button class="section__before__dot" aria-label="Go to slide 5"></button>
+                <button class="section__before__dot" aria-label="Go to slide 6"></button>
+                <button class="section__before__dot" aria-label="Go to slide 7"></button>
+                <button class="section__before__dot" aria-label="Go to slide 8"></button>
+            </div>
         </div>
     </section>
+    <section class="section__area reveal-on-scroll">
+        <div class="container">
+            <h3 class="section__title">Service Area</h3>
+            <p class="section__title__decor"></p>
+            <p class="section__area__subtitle">Proudly Serving Chicago & Nearby Suburbs</p>
+            <p class="section__area__desc">We provide residential and commercial cleaning throughout Chicago and
+                surrounding
+                areas.</p>
+            <ul class="section__area__list">
+                <li class="section__area__list__item">Chicago</li>
+                <li class="section__area__list__item">Park Ridge</li>
+                <li class="section__area__list__item">Niles</li>
+                <li class="section__area__list__item">Des Plaines</li>
+                <li class="section__area__list__item">Skokie</li>
+                <li class="section__area__list__item">Glenview</li>
+                <li class="section__area__list__item">Arlington Heights</li>
+                <li class="section__area__list__item">Mount Prospect</li>
+                <li class="section__area__list__item">Surrounding Areas</li>
+            </ul>
+        </div>
 
-    <section id="faq" class="section__faq">
+
+    </section>
+
+    <section id="faq" class="section__faq reveal-on-scroll">
         <div class="container">
             <h2 class="section__title">Frequently Asked Questions</h2>
 
-            <ul class="section__faq__list">
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">Do I need to provide cleaning supplies or equipment?</p>
+            <div class="section__faq__list">
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">Do I need to provide cleaning supplies or equipment?
+                    </summary>
                     <p class="section__faq__list__item__a">No. Our team arrives fully prepared with professional
                         cleaning supplies and modern equipment
                         needed to complete the service. If you have specific products you prefer us to use, please let
                         us know in advance.</p>
-                </li>
+                </details>
 
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">Do I need to be home during the cleaning service?</p>
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">Do I need to be home during the cleaning service?
+                    </summary>
                     <p class="section__faq__list__item__a">No. Many of our clients provide access instructions before
                         the appointment. We respect your
                         privacy and treat every home with care.</p>
-                </li>
+                </details>
 
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">How is the cleaning price determined?</p>
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">How is the cleaning price determined?</summary>
                     <p class="section__faq__list__item__a">Pricing depends on home size, bedrooms/bathrooms count,
                         cleaning type, and property condition. We
                         provide clear estimates before starting.</p>
-                </li>
+                </details>
 
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">Do you offer recurring cleaning discounts?</p>
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">Do you offer recurring cleaning discounts?</summary>
                     <p class="section__faq__list__item__a">Yes. We offer weekly cleaning, every two weeks cleaning,
                         monthly cleaning. Recurring clients receive priority scheduling and maintenance pricing.
                     </p>
-                </li>
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">How long does a cleaning appointment take?</p>
+                </details>
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">How long does a cleaning appointment take?</summary>
                     <p class="section__faq__list__item__a">The time depends on the size and condition of your home and
                         the type of cleaning selected. During your estimate, we can provide an approximate timeframe.
                     </p>
-                </li>
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">What payment methods do you accept?</p>
+                </details>
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">What payment methods do you accept?</summary>
                     <p class="section__faq__list__item__a">Cash, cards, and electronic payments.</p>
-                </li>
-                <li class="section__faq__list__item">
-                    <p class="section__faq__list__item__q">What if I am not satisfied?</p>
+                </details>
+                <details class="section__faq__list__item">
+                    <summary class="section__faq__list__item__q">What if I am not satisfied?</summary>
                     <p class="section__faq__list__item__a">Please contact us within 24 hours. We will review your
                         concerns and work to make it right.</p>
-                </li>
-            </ul>
+                </details>
+            </div>
         </div>
     </section>
-    <section class="section__booking">
+    <section class="section__booking reveal-on-scroll">
         <div class="container">
-            <h3 class="section__title">How to Book Your Cleaning</h3>
-            <p class="sectioion__description">Booking your cleaning service with AMELIVA HOME CLEANING is simple.</p>
+            <h3 class="section__title">How It Works</h3>
+            <p class="sectioion__description">Getting Your Home Clean Is Easy.</p>
             <ul class="section__booking__list">
-                <li class="section__booking__list__item"> 1. Request a Free Estimate
-                    Tell us about your home, property, and cleaning needs.</li>
-                <li class="section__booking__list__item"> 2. Receive Your Personalized Quote
-                    We’ll provide a clear estimate based on the details of your cleaning.</li>
+                <li class="section__booking__list__item"> 1. <span>Tell Us About Your Home.</span> Complete our quick
+                    quote form.
+                </li>
+                <li class="section__booking__list__item"> 2. <span>Receive Your Quote</span>
+                    We'll review your request and pricing details.</li>
                 <li class="section__booking__list__item">
-                    3. Choose Your Preferred Date & Time
-                    Select a convenient appointment that works with your schedule.</li>
-                <li class="section__booking__list__item"> 4. Relax & Let Us Handle the Cleaning
-                    Our professional team arrives prepared and ready to transform your space.</li>
+                    3. <span>Choose Your Date</span>
+                    Pick a convenient appointment time.</li>
+                <li class="section__booking__list__item"> 4. <span>Enjoy Your Clean Home</span>
+                    Relax while we take care of the cleaning.</li>
             </ul>
             <svg class="section__booking__icon" width="40px" height="40px">
                 <use href="./images/sprite.svg#stars"></use>
@@ -394,7 +442,7 @@
             <a href="./booking.html" target="_blank" class="btn btn-primary header__container__nav__button">Book Now</a>
         </div>
     </section>
-    <section class="section__trust-signals">
+    <section class="section__trust-signals reveal-on-scroll">
         <div class="container">
             <ul class="section__trust-signals__list">
                 <li class="section__trust-signals__list__item">
@@ -431,13 +479,14 @@
         <div class="container">
             <div class="section__footer__container">
                 <div class="section__footer__brand">
-                    <img class="section__footer__logo" src="./images/logo-footer.png" />
+                    <img class="section__footer__logo" src="./images/footer-logo.png" />
                     <p>We clean. You relax.</p>
                 </div>
                 <p class="section__footer__area">Professional Cleaning Services in Chicago & Surrounding Suburbs</p>
                 <div class="section__footer__contacts">
                     <p>Phone: <a href="tel:+12242248008" itemprop="telephone">224-224-8008</a></p>
-                    <p>Email: <a href="amelivahomecleaning@gmail.com" itemprop="email">amelivahomecleaning@gmail.com</a>
+                    <p>Email: <a href="mailto:amelivahomecleaning@gmail.com"
+                            itemprop="email">amelivahomecleaning@gmail.com</a>
                     </p>
                 </div>
 
@@ -456,6 +505,7 @@
                 <p class="section__footer__rights-reserved">&copy; 2026 Ameliva Home Cleaning. All rights reserved.</p>
             </div>
         </div>
+
         <div class="section__footer__button">
             <a href="tel:+12242248008" itemprop="telephone" class="btn btn-primary">Call Now</a>
             <a href="./booking.html" target="_blank" class="btn btn-secondary">GET A FREE QUOTE</a>
@@ -463,7 +513,14 @@
     </footer>
 
     </main>
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top">
+        ↑
+    </button>
     <script src="./js/menu.js"></script>
+    <script src="./js/footer-button.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@
             <h2 class="section__title">Ready to Come Home to a Cleaner Space?</h2>
             <p class="section__subtitle">Tell us about your home and choose your preferred schedule.</p>
 
-            <form class="booking-form" action="#" method="POST">
+            <form class="booking-form" id="form" action="https://formspree.io/f/moevdpqd" method="POST">
                 <div class="booking-form__section">
                     <h3 class="booking-form__section-title">1. Contact Information</h3>
 
@@ -49,7 +49,7 @@
 
                     <div class="booking-form__row">
                         <div class="booking-form__group booking-form__group--half">
-                            <label class="booking-form__label" for="client-email">Email Address *</label>
+                            <label class="booking-form__label" for="client-email">Email *</label>
                             <input type="email" id="client-email" name="email" class="booking-form__input"
                                 placeholder="example@mail.com" required>
                         </div>
@@ -145,7 +145,6 @@
                     <h3 class="booking-form__section-title">4. Date & Time</h3>
 
                     <div class="booking-form__row">
-                        <!-- Календар -->
                         <div class="booking-form__group booking-form__group--half">
                             <label class="booking-form__label" for="cleaning-date">Preferred Date *</label>
                             <input type="date" id="cleaning-date" name="cleaning_date"
@@ -195,14 +194,14 @@
                     <div class="booking-form__group">
                         <label class="booking-form__terms">
                             <input type="checkbox" name="terms" required>
-                            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                            <span>I agree to the <a href="#">Terms of Service</a> and <a href="./policies.html">Privacy
                                     Policy</a>.</span>
                         </label>
                     </div>
                 </div>
 
                 <button type="submit" class="booking-form__submit-btn">Complete Booking</button>
-
+                <p id="form-status"></p>
             </form>
 
         </div>
